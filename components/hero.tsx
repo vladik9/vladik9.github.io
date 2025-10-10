@@ -69,7 +69,7 @@ export function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4"
             >
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button size="lg" onClick={() => window.location.href = "#projects"} className="bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer" >
                 {t.hero.viewWork}
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
@@ -114,7 +114,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex justify-center lg:justify-end"
+              className="flex justify-center lg:justify-around"
             >
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary glow-card">
                 <Image

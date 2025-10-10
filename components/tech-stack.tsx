@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const technologies = [
   { name: "C", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/c-colored.svg", color: "#61DAFB" },
+  { name: "C++", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/cplusplus-colored.svg", color: "#61DAFB" },
   { name: "React", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/react-colored.svg", color: "#61DAFB" },
-
   { name: "React Native", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/react-colored.svg", color: "#61DAFB" },
   { name: "JavaScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/javascript-colored.svg", color: "#F7DF1E" },
   { name: "TypeScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/typescript-colored.svg", color: "#3178C6" },

@@ -1,149 +1,152 @@
-export type Language = "en" | "ro" | "ru"
+export type Language = "en" | "ro" | "ru";
 
 export interface Vocabulary {
   // Navigation
   nav: {
-    home: string
-    about: string
-    skills: string
-    experience: string
-    education: string
-    certifications: string
-    projects: string
-    contact: string
-    quote: string
-    downloadCV: string
-  }
+    home: string;
+    about: string;
+    skills: string;
+    experience: string;
+    education: string;
+    certifications: string;
+    projects: string;
+    contact: string;
+    quote: string;
+    downloadCV: string;
+  };
   // Hero Section
   hero: {
-    greeting: string
-    name: string
-    title: string
-    description: string
-    viewWork: string
-    downloadCV: string
+    greeting: string;
+    name: string;
+    title: string;
+    description: string;
+    viewWork: string;
+    downloadCV: string;
     stats: {
-      experience: string
-      projects: string
-      clients: string
-      successRate: string
-    }
-  }
+      experience: string;
+      projects: string;
+      clients: string;
+      successRate: string;
+    };
+  };
   // About Section
   about: {
-    title: string
-    subtitle: string
-    description: string
+    title: string;
+    subtitle: string;
+    description: string;
     journey: {
-      title: string
-      description: string
-    }
+      title: string;
+      description: string;
+    };
     expertise: {
-      frontend: { title: string; description: string }
-      mobile: { title: string; description: string }
-      backend: { title: string; description: string }
-      fullstack: { title: string; description: string }
-    }
+      frontend: { title: string; description: string; };
+      mobile: { title: string; description: string; };
+      backend: { title: string; description: string; };
+      fullstack: { title: string; description: string; };
+    };
     highlights: {
-      excellence: { title: string; description: string }
-      satisfaction: { title: string; description: string }
-    }
-  }
+      excellence: { title: string; description: string; };
+      satisfaction: { title: string; description: string; };
+    };
+  };
   // Skills Section
   skills: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   // Tech Stack Section
   techStack: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   // Experience Section
   experience: {
-    title: string
-    subtitle: string
-    achievements: string
-    technologies: string
-  }
+    title: string;
+    subtitle: string;
+    achievements: string;
+    technologies: string;
+  };
   // Education Section
   education: {
-    title: string
-    subtitle: string
-    subjects: string
-  }
+    title: string;
+    subtitle: string;
+    subjects: string;
+  };
   // Certifications Section
   certifications: {
-    title: string
-    subtitle: string
-    details: string
-  }
+    title: string;
+    subtitle: string;
+    details: string;
+  };
   // Projects Section
   projects: {
-    title: string
-    subtitle: string
-    viewProject: string
-    inDevelopment: string
-  }
+    title: string;
+    subtitle: string;
+    viewProject: string;
+    inDevelopment: string;
+  };
   // Contact Section
   contact: {
-    title: string
-    subtitle: string
-    startConversation: string
-    description: string
-    email: string
-    phone: string
-    location: string
+    title: string;
+    subtitle: string;
+    startConversation: string;
+    description: string;
+    email: string;
+    phone: string;
+    location: string;
     form: {
-      firstName: string
-      lastName: string
-      email: string
-      subject: string
-      message: string
-      send: string
-    }
-  }
+      firstName: string;
+      lastName: string;
+      email: string;
+      subject: string;
+      message: string;
+      send: string,
+    };
+  };
   // Quote Request Section
   quote: {
-    title: string
-    subtitle: string
-    projectDetails: string
-    contactDetails: string
+    title: string;
+    subtitle: string;
+    projectDetails: string;
+    contactDetails: string;
     form: {
-      name: string
-      email: string
-      company: string
-      phone: string
-      projectType: string
-      budget: string
-      timeline: string
-      services: string
-      description: string
-      submit: string
-    }
+      name: string;
+      email: string;
+      company: string;
+      phone: string;
+      projectType: string;
+      budget: string;
+      timeline: string;
+      services: string;
+      description: string;
+      submit: string,
+      specialRequests: string,
+      terms: string,
+      marketing: string;
+    };
     services: {
-      mobileNative: string
-      mobileWeb: string
-      desktopSoftware: string
-      consulting: string
-      webDevelopment: string
-      automation: string
-      testing: string
-    }
+      mobileNative: string;
+      mobileWeb: string;
+      desktopSoftware: string;
+      consulting: string;
+      webDevelopment: string;
+      automation: string;
+      testing: string;
+    };
     response: {
-      title: string
-      email: string
-      detailed: string
-    }
-  }
+      title: string;
+      email: string;
+      detailed: string;
+    };
+  };
   // Footer
   footer: {
-    description: string
-    quickLinks: string
-    services: string
-    copyright: string
-    madeWith: string
-  }
+    description: string;
+    quickLinks: string;
+    services: string;
+    copyright: string;
+    madeWith: string;
+  };
 }
 
 export const vocabulary: Record<Language, Vocabulary> = {
@@ -262,6 +265,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         subject: "Subject",
         message: "Message",
         send: "Send Message",
+
       },
     },
     quote: {
@@ -281,6 +285,9 @@ export const vocabulary: Record<Language, Vocabulary> = {
         services: "Services of Interest",
         description: "Project Description",
         submit: "Request Quote",
+        specialRequests: "Special Requests",
+        terms: "I agree to the terms and conditions",
+        marketing: "I want to receive marketing emails",
       },
       services: {
         mobileNative: "Native Mobile App (iOS/Android, React Native, Flutter)",
@@ -421,6 +428,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         subject: "Subiect",
         message: "Mesaj",
         send: "Trimite Mesaj",
+
       },
     },
     quote: {
@@ -440,6 +448,9 @@ export const vocabulary: Record<Language, Vocabulary> = {
         services: "Servicii de Interes",
         description: "Descrierea Proiectului",
         submit: "Solicită Oferta",
+        specialRequests: "Solicitații Speciale",
+        terms: "Acceptez Termenii de Utilizare",
+        marketing: "Acceptez Politica de Marketing",
       },
       services: {
         mobileNative: "Aplicație Mobilă Nativă (iOS/Android, React Native, Flutter)",
@@ -581,6 +592,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         subject: "Тема",
         message: "Сообщение",
         send: "Отправить Сообщение",
+
       },
     },
     quote: {
@@ -600,6 +612,9 @@ export const vocabulary: Record<Language, Vocabulary> = {
         services: "Интересующие Услуги",
         description: "Описание Проекта",
         submit: "Запросить Предложение",
+        specialRequests: "Специальные Запросы",
+        terms: "Я принимаю условия политики конфиденциальности",
+        marketing: "Согласие на рассылку",
       },
       services: {
         mobileNative: "Нативное Мобильное Приложение (iOS/Android, React Native, Flutter)",
@@ -625,4 +640,4 @@ export const vocabulary: Record<Language, Vocabulary> = {
       madeWith: "Сделано с",
     },
   },
-}
+};

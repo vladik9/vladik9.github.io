@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { useLanguage } from "./language-provider";
+import { info } from "@/lib/info";
 
 const budgetRanges = [
   "Under $5,000",
@@ -277,8 +278,8 @@ export function RequestQuote() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">{t.contact.email}</p>
-                  <a href="mailto:ghodadravivek@gmail.com" className="text-sm text-primary hover:underline">
-                    ghodadravivek@gmail.com
+                  <a href={`mailto:${info.personal.email}`} className="text-sm text-primary hover:underline">
+                    {info.personal.email}
                   </a>
                 </div>
               </div>
