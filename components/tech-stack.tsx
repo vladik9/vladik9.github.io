@@ -3,33 +3,34 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import SkillsIcons from "./skills-icons";
+import Image from "next/image";
 
 const technologies = [
-  { name: "React", icon: "⚛️", color: "#61DAFB" },
-  { name: "React Native", icon: "📱", color: "#61DAFB" },
-  { name: "JavaScript", icon: "JS", color: "#F7DF1E" },
-  { name: "TypeScript", icon: "TS", color: "#3178C6" },
-  { name: "Node.js", icon: "🟢", color: "#339933" },
-  { name: "Next.js", icon: "▲", color: "#000000" },
-  { name: "HTML5", icon: "HTML", color: "#E34F26" },
-  { name: "CSS3", icon: "CSS", color: "#1572B6" },
-  { name: "Tailwind", icon: "🎨", color: "#06B6D4" },
-  { name: "Redux", icon: "🔄", color: "#764ABC" },
-  { name: "Firebase", icon: "🔥", color: "#FFCA28" },
-  { name: "MongoDB", icon: "🍃", color: "#47A248" },
-  { name: "PostgreSQL", icon: "🐘", color: "#4169E1" },
-  { name: "Git", icon: "📦", color: "#F05032" },
-  { name: "REST API", icon: "🔌", color: "#009688" },
-  { name: "GraphQL", icon: "◈", color: "#E10098" },
-  { name: "Socket.io", icon: "🔌", color: "#010101" },
-  { name: "Express", icon: "⚡", color: "#000000" },
-  { name: "Vue.js", icon: "V", color: "#4FC08D" },
-  { name: "Angular", icon: "A", color: "#DD0031" },
-  { name: "Flutter", icon: "🦋", color: "#02569B" },
-  { name: "Swift", icon: "🍎", color: "#FA7343" },
-  { name: "Python", icon: "🐍", color: "#3776AB" },
-  { name: "Docker", icon: "🐳", color: "#2496ED" },
+  { name: "C", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/c-colored.svg", color: "#61DAFB" },
+  { name: "React", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/react-colored.svg", color: "#61DAFB" },
+
+  { name: "React Native", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/react-colored.svg", color: "#61DAFB" },
+  { name: "JavaScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/javascript-colored.svg", color: "#F7DF1E" },
+  { name: "TypeScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/typescript-colored.svg", color: "#3178C6" },
+  { name: "Node.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nodejs-colored.svg", color: "#339933" },
+  { name: "Next.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nextjs-colored-dark.svg", color: "#000000" },
+  { name: "HTML5", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/html5-colored.svg", color: "#E34F26" },
+  { name: "CSS3", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/css3-colored.svg", color: "#1572B6" },
+  { name: "Tailwind", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/tailwindcss-colored.svg", color: "#06B6D4" },
+  { name: "Redux", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/redux-colored.svg", color: "#764ABC" },
+  { name: "Firebase", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/firebase-colored.svg", color: "#FFCA28" },
+  { name: "MongoDB", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mongodb-colored.svg", color: "#47A248" },
+  { name: "PostgreSQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/postgresql-colored.svg", color: "#4169E1" },
+  { name: "Git", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/git-colored.svg", color: "#F05032" },
+  { name: "GraphQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/graphql-colored.svg", color: "#E10098" },
+  { name: "Socket.io", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/socket-dark.svg", color: "#010101" },
+  { name: "Express", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/express-colored-dark.svg", color: "#000000" },
+  { name: "Vue.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/vuejs-colored.svg", color: "#4FC08D" },
+  { name: "Java", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/java-colored.svg", color: "#DD0031" },
+  { name: "MySQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mysql-colored.svg", color: "#02569B" },
+  { name: "Python", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/python-colored.svg", color: "#3776AB" },
+  { name: "Docker", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/docker-colored.svg", color: "#2496ED" },
+  { name: "AWS", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aws-colored-dark.svg", color: "#2496ED" },
 ];
 
 export function TechStack() {
@@ -37,7 +38,7 @@ export function TechStack() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="tech-stack" ref={ref} className="py-20 px-4">
+    <section id="tech-stack" ref={ref} className="py-30 px-4">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,20 +71,27 @@ export function TechStack() {
             >
               <div className="bg-white dark:bg-card border border-border rounded-xl p-4 flex flex-col items-center justify-center gap-2 h-24 glow-card shadow-lg hover:shadow-xl transition-all duration-300">
                 <div
-                  className="text-3xl font-bold transition-transform duration-300 group-hover:scale-110"
+                  className="text-3xl font-bold transition-transform duration-300 group-hover:scale-90"
                   style={{ color: tech.color }}
                 >
-                  {tech.icon}
+                  <Image
+                    src={tech.icon}
+                    width={80}
+                    height={80}
+                    className="scale-60 transition-all duration-300 hover:scale-80 ease-in-out"
+                    alt={tech.name}
+                  />
+                  <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors align-text-top flex items-center justify-center pb-4">
+                    {tech.name}
+                  </span>
+
                 </div>
-                <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
-                  {tech.name}
-                </span>
+
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-      <SkillsIcons />
     </section>
   );
 }

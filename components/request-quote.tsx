@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { motion } from "framer-motion"
-import { Mail, Calendar, Clock, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { useState } from "react"
-import { useLanguage } from "./language-provider"
+import type React from "react";
+import { motion } from "framer-motion";
+import { Mail, Calendar, Clock, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useState } from "react";
+import { useLanguage } from "./language-provider";
 
 const budgetRanges = [
   "Under $5,000",
@@ -17,12 +17,12 @@ const budgetRanges = [
   "$25,000 - $50,000",
   "$50,000+",
   "Not sure yet",
-]
-const timelines = ["ASAP", "Within 1 month", "1-3 months", "3-6 months", "6+ months", "Flexible"]
+];
+const timelines = ["ASAP", "Within 1 month", "1-3 months", "3-6 months", "6+ months", "Flexible"];
 
 export function RequestQuote() {
-  const { t } = useLanguage()
-  const [selectedServices, setSelectedServices] = useState<string[]>([])
+  const { t } = useLanguage();
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,16 +33,16 @@ export function RequestQuote() {
     timeline: "",
     description: "",
     specialRequests: "",
-  })
+  });
 
   const handleServiceToggle = (service: string) => {
-    setSelectedServices((prev) => (prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service]))
-  }
+    setSelectedServices((prev) => (prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service]));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("[v0] Form submitted:", { ...formData, services: selectedServices })
-  }
+    e.preventDefault();
+    console.log("[v0] Form submitted:", { ...formData, services: selectedServices });
+  };
 
   const services = [
     t.quote.services.mobileNative,
@@ -52,7 +52,7 @@ export function RequestQuote() {
     t.quote.services.webDevelopment,
     t.quote.services.automation,
     t.quote.services.testing,
-  ]
+  ];
 
   return (
     <section id="quote" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
@@ -288,7 +288,7 @@ export function RequestQuote() {
             <div className="bg-card rounded-2xl p-6 shadow-lg border border-border">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-bold">Vivek Ghodadra</h3>
+                  <h3 className="text-xl font-bold">Vlad Cornici</h3>
                   <p className="text-sm text-muted-foreground">
                     Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.
                   </p>
@@ -332,5 +332,5 @@ export function RequestQuote() {
         </div>
       </div>
     </section>
-  )
+  );
 }

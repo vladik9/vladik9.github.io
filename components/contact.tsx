@@ -1,40 +1,41 @@
-"use client"
+"use client";
 
-import React from "react"
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { useLanguage } from "./language-provider"
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "./language-provider";
+import { info } from "@/lib/info";
 
 const contactInfo = [
   {
     icon: Mail,
     label: "email",
-    value: "vivek.ghodadra@example.com",
-    href: "mailto:vivek.ghodadra@example.com",
+    value: info.personal.email,
+    href: `mailto:${info.personal.email}`,
   },
   {
     icon: Phone,
     label: "phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: `${info.personal.phone}`,
+    href: `tel:${info.personal.email}`,
   },
   {
     icon: MapPin,
     label: "location",
-    value: "Pune, Maharashtra, India",
+    value: `${info.personal.location}`,
     href: "#",
   },
-]
+];
 
 export function Contact() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const { t } = useLanguage()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="contact" ref={ref} className="py-20 px-4">
@@ -144,5 +145,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

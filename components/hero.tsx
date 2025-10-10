@@ -1,20 +1,21 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react"
-import Image from "next/image"
-import { useLanguage } from "@/components/language-provider"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Image from "next/image";
+import { useLanguage } from "@/components/language-provider";
+import { vocabulary } from "@/lib/vocabulary";
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const stats = [
     { label: t.hero.stats.experience, value: "5+" },
     { label: t.hero.stats.projects, value: "23+" },
     { label: t.hero.stats.clients, value: "15+" },
     { label: t.hero.stats.successRate, value: "100%" },
-  ]
+  ];
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4">
@@ -117,8 +118,8 @@ export function Hero() {
             >
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary glow-card">
                 <Image
-                  src="/professional-developer-portrait.png"
-                  alt="Vivek Ghodadra"
+                  src="https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/personal.jpeg"
+                  alt={vocabulary.en.hero.name}
                   fill
                   className="object-cover"
                   priority
@@ -150,5 +151,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -162,7 +162,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     hero: {
       greeting: "Hello, I'm",
-      name: "Vivek Ghodadra",
+      name: "Vlad Cornici",
       title: "Senior Mobile & Web Developer",
       description:
         "Transforming ideas into exceptional digital experiences with 5+ years of expertise in React Native, JavaScript, TypeScript, and modern web technologies. Specialized in creating scalable, user-centric applications.",
@@ -321,7 +321,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     hero: {
       greeting: "Bună, sunt",
-      name: "Vivek Ghodadra",
+      name: "Vlad Cornici",
       title: "Dezvoltator Senior Mobile & Web",
       description:
         "Transformând idei în experiențe digitale excepționale cu peste 5 ani de experiență în React Native, JavaScript, TypeScript și tehnologii web moderne. Specializat în crearea de aplicații scalabile, centrate pe utilizator.",
@@ -480,7 +480,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     hero: {
       greeting: "Привет, я",
-      name: "Вивек Гходадра",
+      name: "Влад Корнич",
       title: "Старший Mobile & Web Разработчик",
       description:
         "Превращаю идеи в исключительные цифровые решения с более чем 5-летним опытом работы с React Native, JavaScript, TypeScript и современными веб-технологиями. Специализируюсь на создании масштабируемых, ориентированных на пользователя приложений.",
