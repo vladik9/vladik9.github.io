@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowDown, DownloadIcon, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/components/language-provider";
 import { AnimatedParticles } from "@/components/animated-particles";
@@ -82,6 +82,7 @@ export function Hero() {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent cursor-pointer"
                 onClick={downloadCV} >
                 {t.hero.downloadCV}
+                <DownloadIcon className="ml-2 h-4 w-4" />
               </Button>
             </motion.div>
 
