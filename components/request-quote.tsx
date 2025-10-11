@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { useLanguage } from "./language-provider";
+import { ConfirmationModal } from "./confirmation-modal";
 import { info } from "@/lib/info";
 
 const budgetRanges = [
@@ -35,6 +36,7 @@ export function RequestQuote() {
     description: "",
     specialRequests: "",
   });
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleServiceToggle = (service: string) => {
     setSelectedServices((prev) => (prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service]));
@@ -43,6 +45,19 @@ export function RequestQuote() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("[v0] Form submitted:", { ...formData, services: selectedServices });
+    setShowConfirmation(true);
+    setFormData({
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      projectType: "",
+      budget: "",
+      timeline: "",
+      description: "",
+      specialRequests: "",
+    });
+    setSelectedServices([]);
   };
 
   const services = [
@@ -289,7 +304,7 @@ export function RequestQuote() {
             <div className="bg-card rounded-2xl p-6 shadow-lg border border-border">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-bold">Vlad Cornici</h3>
+                  <h3 className="text-xl font-bold">{info.personal.name}</h3>
                   <p className="text-sm text-muted-foreground">
                     Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.
                   </p>
@@ -332,6 +347,13 @@ export function RequestQuote() {
           </motion.div>
         </div>
       </div>
+      <ConfirmationModal
+        isOpen={showConfirmation}
+        onClose={() => setShowConfirmation(false)}
+        type="success"
+        title={t.confirmation.formSubmitted.title}
+        message={t.confirmation.formSubmitted.message}
+      />
     </section>
   );
 }

@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { Briefcase, Calendar } from "lucide-react"
-import { useLanguage } from "./language-provider"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Briefcase, Calendar } from "lucide-react";
+import { useLanguage } from "./language-provider";
 
 const experiences = [
   {
@@ -49,12 +49,12 @@ const experiences = [
     ],
     technologies: ["React Native", "SQLite", "JavaScript", "REST APIs"],
   },
-]
+];
 
 export function Experience() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const { t } = useLanguage()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="experience" ref={ref} className="py-20 px-4">
@@ -71,7 +71,7 @@ export function Experience() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-border" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -80,15 +80,16 @@ export function Experience() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`relative grid md:grid-cols-2 gap-8 items-start ${
-                  index % 2 === 0 ? "" : "md:flex-row-reverse"
-                }`}
+                className={`relative grid md:grid-cols-2 gap-8 items-start ${index % 2 === 0 ? "" : "md:flex-row-reverse"
+                  }`}
               >
                 {/* Timeline dot */}
-                <div className="hidden md:block absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full -ml-2 ring-4 ring-background" />
+                <div className="absolute left-4 md:left-1/2 top-8 w-4 h-4 bg-primary rounded-full -ml-2 ring-4 ring-background" />
 
                 {/* Content */}
-                <div className={index % 2 === 0 ? "md:text-right md:pr-12" : "md:col-start-2 md:pl-12"}>
+                <div
+                  className={`pl-12 md:pl-0 ${index % 2 === 0 ? "md:text-right md:pr-12" : "md:col-start-2 md:pl-12"}`}
+                >
                   <div className="bg-card border border-border rounded-xl p-6 glow-card shadow-lg">
                     <div className="flex items-center gap-2 text-primary mb-2">
                       <Calendar className="h-4 w-4" />
@@ -132,5 +133,5 @@ export function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/components/language-provider";
+import { AnimatedParticles } from "@/components/animated-particles";
 import { vocabulary } from "@/lib/vocabulary";
 
 export function Hero() {
@@ -116,16 +117,25 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex justify-center lg:justify-around"
             >
-              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary glow-card">
-                <Image
-                  src="https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/personal.jpeg"
-                  alt={vocabulary.en.hero.name}
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="relative">
+                {/* Particles background */}
+                <div className="absolute -inset-8 pointer-events-none">
+                  <AnimatedParticles />
+                </div>
+
+                {/* Profile picture */}
+                <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary glow-card z-10">
+                  <Image
+                    src="https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/personal.jpeg"
+                    alt={vocabulary.en.hero.name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
             </motion.div>
+
 
             {/* Stats Grid */}
             <motion.div

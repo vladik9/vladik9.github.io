@@ -13,7 +13,7 @@ const technologies = [
   { name: "JavaScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/javascript-colored.svg", color: "#F7DF1E" },
   { name: "TypeScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/typescript-colored.svg", color: "#3178C6" },
   { name: "Node.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nodejs-colored.svg", color: "#339933" },
-  { name: "Next.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nextjs-colored-dark.svg", color: "#000000" },
+  { name: "Next.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nextjs.svg", color: "#000000" },
   { name: "HTML5", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/html5-colored.svg", color: "#E34F26" },
   { name: "CSS3", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/css3-colored.svg", color: "#1572B6" },
   { name: "Tailwind", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/tailwindcss-colored.svg", color: "#06B6D4" },
@@ -24,13 +24,13 @@ const technologies = [
   { name: "Git", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/git-colored.svg", color: "#F05032" },
   { name: "GraphQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/graphql-colored.svg", color: "#E10098" },
   { name: "Socket.io", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/socket-dark.svg", color: "#010101" },
-  { name: "Express", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/express-colored-dark.svg", color: "#000000" },
+  { name: "Express", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/express.svg", color: "#000000" },
   { name: "Vue.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/vuejs-colored.svg", color: "#4FC08D" },
   { name: "Java", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/java-colored.svg", color: "#DD0031" },
   { name: "MySQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mysql-colored.svg", color: "#02569B" },
   { name: "Python", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/python-colored.svg", color: "#3776AB" },
   { name: "Docker", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/docker-colored.svg", color: "#2496ED" },
-  { name: "AWS", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aws-colored-dark.svg", color: "#2496ED" },
+  { name: "AWS", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aws.svg", color: "#2496ED" },
 ];
 
 export function TechStack() {

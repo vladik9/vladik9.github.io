@@ -147,6 +147,56 @@ export interface Vocabulary {
     copyright: string;
     madeWith: string;
   };
+  // Chat Modal Section
+  chat: {
+    title: string;
+    subtitle: string;
+    welcome: {
+      title: string;
+      subtitle: string;
+    };
+    options: {
+      talkWithAI: {
+        title: string;
+        description: string;
+      };
+      exploreQA: {
+        title: string;
+        description: string;
+      };
+      contact: {
+        title: string;
+        description: string;
+      };
+    };
+    placeholders: {
+      typeMessage: string;
+      startConversation: string;
+    };
+    qa: {
+      q1: { question: string; answer: string; };
+      q2: { question: string; answer: string; };
+      q3: { question: string; answer: string; };
+      q4: { question: string; answer: string; };
+      q5: { question: string; answer: string; };
+    };
+    aiResponse: string;
+  };
+  // Confirmation Modal Section
+  confirmation: {
+    success: string;
+    error: string;
+    info: string;
+    close: string;
+    formSubmitted: {
+      title: string;
+      message: string;
+    };
+    formError: {
+      title: string;
+      message: string;
+    };
+  };
 }
 
 export const vocabulary: Record<Language, Vocabulary> = {
@@ -311,6 +361,74 @@ export const vocabulary: Record<Language, Vocabulary> = {
       services: "Services",
       copyright: "All rights reserved.",
       madeWith: "Made with",
+    }, chat: {
+      title: "AI Assistant",
+      subtitle: "Always here to help",
+      welcome: {
+        title: "Welcome!",
+        subtitle: "How can I help you today?",
+      },
+      options: {
+        talkWithAI: {
+          title: "Talk with AI",
+          description: "Ask me anything about my work",
+        },
+        exploreQA: {
+          title: "Explore Q&A",
+          description: "Quick answers to common questions",
+        },
+        contact: {
+          title: "Contact Me",
+          description: "Send me a direct message",
+        },
+      },
+      placeholders: {
+        typeMessage: "Type your message...",
+        startConversation: "Start a conversation by typing your question below",
+      },
+      qa: {
+        q1: {
+          question: "What technologies do you specialize in?",
+          answer:
+            "I specialize in React Native for mobile development, React.js/Next.js for web applications, Node.js for backend, and TypeScript for type-safe code. I also work with Firebase, Redux, and various modern web technologies.",
+        },
+        q2: {
+          question: "How long does a typical project take?",
+          answer:
+            "Project timelines vary based on complexity. A simple mobile app typically takes 4-8 weeks, while complex applications with backend integration can take 3-6 months. I provide detailed timelines during the consultation phase.",
+        },
+        q3: {
+          question: "Do you work with international clients?",
+          answer:
+            "Yes! I work with clients globally and am experienced in remote collaboration. I'm flexible with time zones and use modern communication tools to ensure smooth project delivery.",
+        },
+        q4: {
+          question: "What is your development process?",
+          answer:
+            "I follow an agile methodology with regular updates and iterations. The process includes: requirements gathering, design mockups, development sprints, testing, deployment, and post-launch support.",
+        },
+        q5: {
+          question: "Do you provide maintenance after project completion?",
+          answer:
+            "Yes, I offer ongoing maintenance and support packages. This includes bug fixes, updates, performance optimization, and feature enhancements based on your needs.",
+        },
+      },
+      aiResponse:
+        "Thank you for your message! This is a placeholder response. I'll get back to you shortly with a detailed answer. For immediate assistance, please use the contact form or email me directly at ghodadravivek.work@gmail.com",
+    },
+    confirmation: {
+      success: "Success",
+      error: "Error",
+      info: "Information",
+      close: "Close",
+      formSubmitted: {
+        title: "Message Sent Successfully!",
+        message: "Thank you for reaching out! I'll get back to you within 24 hours.",
+      },
+      formError: {
+        title: "Submission Failed",
+        message: "There was an error submitting your form. Please try again or contact me directly.",
+      },
     },
   },
   ro: {
@@ -475,6 +593,75 @@ export const vocabulary: Record<Language, Vocabulary> = {
       copyright: "Toate drepturile rezervate.",
       madeWith: "Realizat cu",
     },
+    chat: {
+      title: "Asistent AI",
+      subtitle: "Mereu aici să ajut",
+      welcome: {
+        title: "Bun venit!",
+        subtitle: "Cum te pot ajuta astăzi?",
+      },
+      options: {
+        talkWithAI: {
+          title: "Vorbește cu AI",
+          description: "Întreabă-mă orice despre munca mea",
+        },
+        exploreQA: {
+          title: "Explorează Întrebări",
+          description: "Răspunsuri rapide la întrebări frecvente",
+        },
+        contact: {
+          title: "Contactează-mă",
+          description: "Trimite-mi un mesaj direct",
+        },
+      },
+      placeholders: {
+        typeMessage: "Scrie mesajul tău...",
+        startConversation: "Începe o conversație scriind întrebarea ta mai jos",
+      },
+      qa: {
+        q1: {
+          question: "În ce tehnologii te specializezi?",
+          answer:
+            "Mă specializez în React Native pentru dezvoltare mobilă, React.js/Next.js pentru aplicații web, Node.js pentru backend și TypeScript pentru cod type-safe. Lucrez și cu Firebase, Redux și diverse tehnologii web moderne.",
+        },
+        q2: {
+          question: "Cât durează un proiect tipic?",
+          answer:
+            "Durata proiectelor variază în funcție de complexitate. O aplicație mobilă simplă durează de obicei 4-8 săptămâni, în timp ce aplicațiile complexe cu integrare backend pot dura 3-6 luni. Ofer termene detaliate în faza de consultare.",
+        },
+        q3: {
+          question: "Lucrezi cu clienți internaționali?",
+          answer:
+            "Da! Lucrez cu clienți din întreaga lume și am experiență în colaborare la distanță. Sunt flexibil cu fusurile orare și folosesc instrumente moderne de comunicare pentru a asigura livrarea fără probleme a proiectelor.",
+        },
+        q4: {
+          question: "Care este procesul tău de dezvoltare?",
+          answer:
+            "Urmez o metodologie agile cu actualizări și iterații regulate. Procesul include: colectarea cerințelor, machete de design, sprint-uri de dezvoltare, testare, implementare și suport post-lansare.",
+        },
+        q5: {
+          question: "Oferi mentenanță după finalizarea proiectului?",
+          answer:
+            "Da, ofer pachete de mentenanță și suport continuu. Acestea includ remedieri de erori, actualizări, optimizare a performanței și îmbunătățiri de funcționalități în funcție de nevoile tale.",
+        },
+      },
+      aiResponse:
+        "Mulțumesc pentru mesaj! Acesta este un răspuns temporar. Voi reveni în curând cu un răspuns detaliat. Pentru asistență imediată, te rog folosește formularul de contact sau trimite-mi un email direct la ghodadravivek.work@gmail.com",
+    },
+    confirmation: {
+      success: "Succes",
+      error: "Eroare",
+      info: "Informație",
+      close: "Închide",
+      formSubmitted: {
+        title: "Mesaj Trimis cu Succes!",
+        message: "Mulțumesc că m-ai contactat! Voi răspunde în 24 de ore.",
+      },
+      formError: {
+        title: "Trimitere Eșuată",
+        message: "A apărut o eroare la trimiterea formularului. Te rog încearcă din nou sau contactează-mă direct.",
+      },
+    },
   },
   ru: {
     nav: {
@@ -638,6 +825,75 @@ export const vocabulary: Record<Language, Vocabulary> = {
       services: "Услуги",
       copyright: "Все права защищены.",
       madeWith: "Сделано с",
+    },
+    chat: {
+      title: "AI Ассистент",
+      subtitle: "Всегда готов помочь",
+      welcome: {
+        title: "Добро пожаловать!",
+        subtitle: "Чем я могу вам помочь сегодня?",
+      },
+      options: {
+        talkWithAI: {
+          title: "Поговорить с AI",
+          description: "Спросите меня о моей работе",
+        },
+        exploreQA: {
+          title: "Изучить Вопросы",
+          description: "Быстрые ответы на частые вопросы",
+        },
+        contact: {
+          title: "Связаться со Мной",
+          description: "Отправьте мне прямое сообщение",
+        },
+      },
+      placeholders: {
+        typeMessage: "Введите ваше сообщение...",
+        startConversation: "Начните разговор, введя свой вопрос ниже",
+      },
+      qa: {
+        q1: {
+          question: "В каких технологиях вы специализируетесь?",
+          answer:
+            "Я специализируюсь на React Native для мобильной разработки, React.js/Next.js для веб-приложений, Node.js для backend и TypeScript для типобезопасного кода. Также работаю с Firebase, Redux и различными современными веб-технологиями.",
+        },
+        q2: {
+          question: "Сколько времени занимает типичный проект?",
+          answer:
+            "Сроки проектов варьируются в зависимости от сложности. Простое мобильное приложение обычно занимает 4-8 недель, в то время как сложные приложения с интеграцией backend могут занять 3-6 месяцев. Я предоставляю подробные сроки на этапе консультации.",
+        },
+        q3: {
+          question: "Вы работаете с международными клиентами?",
+          answer:
+            "Да! Я работаю с клиентами по всему миру и имею опыт удаленного сотрудничества. Я гибок в отношении часовых поясов и использую современные инструменты коммуникации для обеспечения бесперебойной доставки проектов.",
+        },
+        q4: {
+          question: "Каков ваш процесс разработки?",
+          answer:
+            "Я следую agile-методологии с регулярными обновлениями и итерациями. Процесс включает: сбор требований, дизайн-макеты, спринты разработки, тестирование, развертывание и поддержку после запуска.",
+        },
+        q5: {
+          question: "Вы предоставляете обслуживание после завершения проекта?",
+          answer:
+            "Да, я предлагаю пакеты постоянного обслуживания и поддержки. Это включает исправление ошибок, обновления, оптимизацию производительности и улучшение функций в соответствии с вашими потребностями.",
+        },
+      },
+      aiResponse:
+        "Спасибо за ваше сообщение! Это временный ответ. Я скоро вернусь с подробным ответом. Для немедленной помощи, пожалуйста, используйте контактную форму или напишите мне напрямую на ghodadravivek.work@gmail.com",
+    },
+    confirmation: {
+      success: "Успех",
+      error: "Ошибка",
+      info: "Информация",
+      close: "Закрыть",
+      formSubmitted: {
+        title: "Сообщение Успешно Отправлено!",
+        message: "Спасибо, что связались со мной! Я отвечу в течение 24 часов.",
+      },
+      formError: {
+        title: "Ошибка Отправки",
+        message: "Произошла ошибка при отправке формы. Пожалуйста, попробуйте снова или свяжитесь со мной напрямую.",
+      },
     },
   },
 };

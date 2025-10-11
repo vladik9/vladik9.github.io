@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "./language-provider";
 import { info } from "@/lib/info";
+import { ConfirmationModal } from "./confirmation-modal";
 
 const contactInfo = [
   {
@@ -36,6 +37,15 @@ export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { t } = useLanguage();
+
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowConfirmation(true);
+    const form = e.target as HTMLFormElement;
+    form.reset();
+  };
 
   return (
     <section id="contact" ref={ref} className="py-20 px-4">
@@ -94,7 +104,7 @@ export function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-8 glow-card shadow-lg"
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="firstName" className="text-sm font-medium">
@@ -144,6 +154,14 @@ export function Contact() {
           </motion.div>
         </div>
       </div>
+
+      <ConfirmationModal
+        isOpen={showConfirmation}
+        onClose={() => setShowConfirmation(false)}
+        type="success"
+        title={t.confirmation.formSubmitted.title}
+        message={t.confirmation.formSubmitted.message}
+      />
     </section>
   );
 }
