@@ -46,6 +46,10 @@ const technologies = [
   { name: "Jira", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/jira.svg", color: "#2496ED" },
   { name: "Prezi", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/prezi.svg", color: "#2496ED" },
   { name: "Canva", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/canva.svg", color: "#2496ED" },
+  { name: "Apache", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/apache.svg", color: "#2496ED" },
+  { name: "NGinx", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nginx.svg", color: "#2496ED" },
+  { name: "Material UI", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mui.svg", color: "#2496ED" },
+
 
 ];
 
