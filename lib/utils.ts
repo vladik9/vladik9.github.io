@@ -13,6 +13,6 @@ export function downloadCV() {
 }
 
 export function highLightText (text: string, keyword: string) {
-  const regex = new RegExp(keyword, 'gi')
+  const regex = new RegExp(`\\b(${keyword.replace(/\+/g, '|\\+')})(\\+)?`, 'gi')
   return text.replace(regex, (match) => `<span class="highlight">${match}</span>`)
 }

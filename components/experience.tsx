@@ -5,51 +5,9 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Calendar } from "lucide-react";
 import { useLanguage } from "./language-provider";
+import { info } from "@/lib/info";
 
-const experiences = [
-  {
-    period: "Jan 2025 - Present",
-    title: "Senior Mobile Developer",
-    company: "Latent - Alpha OBS LLP",
-    location: "Pune, Maharashtra, India (Remote)",
-    description:
-      "Leading development of cross-platform mobile applications using React Native. Mentoring junior developers and implementing best practices for scalable mobile solutions.",
-    achievements: [
-      "Increased app performance by 40% through optimization",
-      "Led team of 5 developers on major product launches",
-      "Implemented CI/CD pipeline reducing deployment time by 60%",
-    ],
-    technologies: ["React Native", "Firebase", "TypeScript", "Redux"],
-  },
-  {
-    period: "Jan 2024 - Jan 2025",
-    title: "Senior Mobile Developer",
-    company: "Vision Infotech",
-    location: "Surat, Gujarat, India",
-    description:
-      "Developed and maintained mobile applications for iOS and Android platforms. Collaborated with cross-functional teams to deliver high-quality user experiences.",
-    achievements: [
-      "Delivered 15+ mobile applications successfully",
-      "Reduced app crash rate by 70% through better error handling",
-      "Integrated payment gateways and third-party APIs",
-    ],
-    technologies: ["React Native", "Socket.IO", "TypeScript", "Redux"],
-  },
-  {
-    period: "Jan 2022 - Jan 2024",
-    title: "Mobile App Developer",
-    company: "Codezee Solutions Pvt. Ltd.",
-    location: "Surat, Gujarat, India",
-    description:
-      "Built responsive mobile applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality user experiences.",
-    achievements: [
-      "Delivered 10+ mobile applications successfully",
-      "Reduced app crash rate by 40% through better error handling",
-      "Implemented CI/CD pipeline reducing deployment time by 30%",
-    ],
-    technologies: ["React Native", "SQLite", "JavaScript", "REST APIs"],
-  },
-];
+const experiences = info.experiences;
 
 export function Experience() {
   const ref = useRef(null);
@@ -71,8 +29,7 @@ export function Experience() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border" />
-
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/80 via-primary/40 to-transparent" />
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
@@ -95,19 +52,19 @@ export function Experience() {
                       <Calendar className="h-4 w-4" />
                       <span className="text-sm font-mono">{exp.period}</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
+                    <h3 className="text-2xl font-bold mb-1 md:text-left">{exp.title}</h3>
                     <div className="flex items-center gap-2 text-muted-foreground mb-4">
                       <Briefcase className="h-4 w-4" />
                       <span>{exp.company}</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-4">{exp.location}</p>
-                    <p className="text-muted-foreground mb-4">{exp.description}</p>
+                    <p className="text-sm text-muted-foreground mb-4 md:text-left">{exp.location}</p>
+                    <p className="text-muted-foreground mb-4 md:text-left">{exp.description}</p>
 
                     <div className="mb-4">
-                      <h4 className="font-semibold mb-2 text-primary">{t.experience.achievements}</h4>
+                      <h4 className="font-semibold mb-2 text-primary md:text-left">{t.experience.achievements}</h4>
                       <ul className="space-y-1">
                         {exp.achievements.map((achievement, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <li key={i} className="text-sm text-muted-foreground flex items-start gap-2 md:text-left">
                             <span className="text-primary mt-1">•</span>
                             <span>{achievement}</span>
                           </li>
@@ -116,7 +73,7 @@ export function Experience() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold mb-2 text-primary text-sm">{t.experience.technologies}</h4>
+                      <h4 className="font-semibold mb-4 text-primary text-sm md:text-left">{t.experience.technologies}</h4>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => (
                           <span key={tech} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">

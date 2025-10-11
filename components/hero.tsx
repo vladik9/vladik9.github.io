@@ -96,10 +96,10 @@ export function Hero() {
               className="flex gap-4"
             >
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Mail, href: "#" },
+                { icon: Github, href: info.personal.social.github },
+                { icon: Linkedin, href: info.personal.social.linkedin },
+                { icon: Twitter, href: info.personal.social.twitter },
+                { icon: Mail, href: info.personal.social.email },
               ].map((social, index) => (
                 <motion.a
                   key={index}

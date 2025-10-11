@@ -37,7 +37,7 @@ export interface Vocabulary {
     journey: {
       title: string;
       description: string;
-      cap: string;
+      additionalDescription: string;
     };
     expertise: {
       frontend: { title: string; description: string; };
@@ -238,7 +238,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       journey: {
         title: "My Development Journey",
         description: `With over ${info.personal.stats.yearOfExperience} years in the development field, I've evolved from a curious beginner to a seasoned professional who bridges mobile and web technologies. My passion lies in writing clean, maintainable code and creating applications that users love to interact with.`,
-        cap: "   I specialize in React Native for cross-platform mobile development, modern JavaScript and TypeScript for robust applications, React.js for dynamic web interfaces, and Node.js for scalable backend services. I'm committed to staying current with emerging technologies and industry best practices.",
+        additionalDescription: "I specialize in React Native for cross-platform mobile development, modern JavaScript and TypeScript for robust applications, React.js for dynamic web interfaces, and Node.js for scalable backend services. I'm committed to staying current with emerging technologies and industry best practices.",
       },
       expertise: {
         frontend: {
@@ -473,7 +473,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       journey: {
         title: "Călătoria Mea în Dezvoltare",
         description: `Cu peste ${info.personal.stats.yearOfExperience} ani în domeniul dezvoltării, am evoluat de la un începător curios la un profesionist experimentat care face legătura între tehnologiile mobile și web. Pasiunea mea constă în scrierea de cod curat, ușor de întreținut și în crearea de aplicații cu care utilizatorii adoră să interacționeze.`,
-        cap: "Mă specializez în React Native pentru dezvoltare mobilă multi-platformă, JavaScript modern și TypeScript pentru aplicații robuste, React.js pentru interfețe web dinamice și Node.js pentru servicii backend scalabile. Mă angajez să rămân la curent cu tehnologiile emergente și cele mai bune practici din industrie.",
+        additionalDescription: "Mă specializez în React Native pentru dezvoltare mobilă multi-platformă, JavaScript modern și TypeScript pentru aplicații robuste, React.js pentru interfețe web dinamice și Node.js pentru servicii backend scalabile. Mă angajez să rămân la curent cu tehnologiile emergente și cele mai bune practici din industrie.",
       },
       expertise: {
         frontend: {
@@ -709,7 +709,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       journey: {
         title: "Мой Путь в Разработке",
         description: `За более чем ${info.personal.stats.yearOfExperience} лет в области разработки я прошел путь от любопытного новичка до опытного профессионала, который объединяет мобильные и веб-технологии. Моя страсть заключается в написании чистого, поддерживаемого кода и создании приложений, с которыми пользователи любят взаимодействовать.`,
-        cap: "Я специализируюсь на React Native для кроссплатформенной мобильной разработки, современном JavaScript и TypeScript для надежных приложений, React.js для динамических веб- интерфейсов и Node.js для масштабируемых бэкенд- сервисов.Я стремлюсь быть в курсе новых технологий и передовых отраслевых практик.",
+        additionalDescription: "Я специализируюсь на React Native для кроссплатформенной мобильной разработки, современном JavaScript и TypeScript для надежных приложений, React.js для динамических веб- интерфейсов и Node.js для масштабируемых бэкенд- сервисов.Я стремлюсь быть в курсе новых технологий и передовых отраслевых практик.",
       },
       expertise: {
         frontend: {

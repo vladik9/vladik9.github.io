@@ -29,7 +29,7 @@ const technologies = [
   { name: "Express", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/express.svg", color: "#000000" },
   { name: "Vue.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/vuejs-colored.svg", color: "#4FC08D" },
   { name: "Java", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/java-colored.svg", color: "#DD0031" },
-  { name: "JUnit", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/junit.svg", color: "#DD0031" },
+  { name: "JUnit", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/junit5.svg", color: "#DD0031" },
   { name: "Spring Boot", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/springboot-colored.svg", color: "#DD0031" },
   { name: "MySQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mysql-colored.svg", color: "#02569B" },
   { name: "Python", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/python-colored.svg", color: "#3776AB" },

@@ -5,36 +5,9 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Calendar } from "lucide-react";
 import { useLanguage } from "./language-provider";
+import { info } from "@/lib/info";
 
-const education = [
-  {
-    period: "2017 - 2021",
-    degree: "Bachelor of Engineering in Computer Science",
-    institution: "Gujarat Technological University",
-    location: "Gujarat, India",
-    description:
-      "Focused on software engineering, data structures, algorithms, and mobile application development. Graduated with distinction.",
-    achievements: [
-      "Graduated with First Class with Distinction",
-      "Led final year project on cross-platform mobile development",
-      "Active member of coding club and tech community",
-    ],
-    subjects: ["Data Structures", "Algorithms", "Mobile Development", "Web Technologies"],
-  },
-  {
-    period: "2015 - 2017",
-    degree: "Higher Secondary Education (Science)",
-    institution: "Gujarat Secondary Education Board",
-    location: "Gujarat, India",
-    description: "Completed higher secondary education with focus on Mathematics, Physics, and Computer Science.",
-    achievements: [
-      "Scored 85% in board examinations",
-      "Participated in state-level coding competitions",
-      "Developed interest in software development",
-    ],
-    subjects: ["Mathematics", "Physics", "Chemistry", "Computer Science"],
-  },
-];
+const education = info.education;
 
 export function Education() {
   const ref = useRef(null);
@@ -56,8 +29,7 @@ export function Education() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border" />
-
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/80 via-primary/40 to-transparent" />
           <div className="space-y-12">
             {education.map((edu, index) => (
               <motion.div
@@ -80,16 +52,16 @@ export function Education() {
                       <Calendar className="h-4 w-4" />
                       <span className="text-sm font-mono">{edu.period}</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-1">{edu.degree}</h3>
+                    <h3 className="text-2xl font-bold mb-1 md:text-left">{edu.degree}</h3>
                     <div className="flex items-center gap-2 text-muted-foreground mb-4">
                       <GraduationCap className="h-4 w-4" />
                       <span>{edu.institution}</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-4">{edu.location}</p>
-                    <p className="text-muted-foreground mb-4">{edu.description}</p>
+                    <p className="text-sm text-muted-foreground mb-4 md:text-left">{edu.location}</p>
+                    <p className="text-muted-foreground mb-4 md:text-left">{edu.description}</p>
 
                     <div className="mb-4">
-                      <h4 className="font-semibold mb-2 text-primary">{t.experience.achievements}</h4>
+                      <h4 className="font-semibold mb-2 text-primary md:text-left">{t.experience.achievements}</h4>
                       <ul className="space-y-1">
                         {edu.achievements.map((achievement, i) => (
                           <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
@@ -101,7 +73,7 @@ export function Education() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold mb-2 text-primary text-sm">{t.education.subjects}</h4>
+                      <h4 className="font-semibold mb-4 text-primary text-sm md:text-left">{t.education.subjects}</h4>
                       <div className="flex flex-wrap gap-2">
                         {edu.subjects.map((subject) => (
                           <span key={subject} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">

@@ -5,6 +5,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Smartphone, Server, Layers } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
+import { highLightText } from "@/lib/utils";
+import { info } from "@/lib/info";
 
 export function About() {
   const { t } = useLanguage();
@@ -73,9 +75,10 @@ export function About() {
             className="space-y-6"
           >
             <h3 className="text-3xl font-bold">{t.about.journey.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">{t.about.journey.description}</p>
+            <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: highLightText(t.about.journey.description, info.personal.stats.yearOfExperience) }} />
+
             <p className="text-muted-foreground leading-relaxed">
-              {t.about.journey.cap}
+              {t.about.journey.additionalDescription}
             </p>
           </motion.div>
 
