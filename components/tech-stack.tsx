@@ -34,7 +34,11 @@ const technologies = [
   { name: "Google Cloud", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/googlecloud-colored.svg", color: "#2496ED" },
   { name: "Cypress", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/cypress.svg", color: "#2496ED" },
   { name: "Unqork", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/unqork.svg", color: "#2496ED" },
-
+  { name: "Linux", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/linux-colored.svg", color: "#2496ED" },
+  { name: "Linux Servers", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/ubuntu-colored.svg", color: "#2496ED" },
+  { name: "Kali", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/kali-linux.svg", color: "#2496ED" },
+  { name: "Windows", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/windows.svg", color: "#2496ED" },
+  { name: "MacOS", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/macos-colored-dark.svg", color: "#2496ED" },
 ];
 
 export function TechStack() {
