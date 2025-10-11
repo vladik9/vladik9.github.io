@@ -31,6 +31,8 @@ const technologies = [
   { name: "Python", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/python-colored.svg", color: "#3776AB" },
   { name: "Docker", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/docker-colored.svg", color: "#2496ED" },
   { name: "AWS", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aws.svg", color: "#2496ED" },
+  { name: "Google Cloud", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/googlecloud-colored.svg", color: "#2496ED" },
+  { name: "Cypress", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/cypress.svg", color: "#2496ED" },
 ];
 
 export function TechStack() {

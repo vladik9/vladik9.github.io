@@ -447,7 +447,9 @@ export const vocabulary: Record<Language, Vocabulary> = {
     hero: {
       greeting: "Bună, sunt",
       name: "Vlad Cornici",
-      title: "Dezvoltator Senior Mobile & Web",
+      title: "Software Engineer | AWS Cloud Certified",
+      // TODO: Add a better description here
+      // description: "Passionate full-stack developer with 5+ years of experience in creating exceptional mobile and web applications. Specialized in FullStack development, emerging technologies like JavaScript, Java, Python and modern web technologies. Being on the same page with AI and ML updates making application and automation easier and faster. Helping clients to improve their bussines and income.",
       description:
         "Transformând idei în experiențe digitale excepționale cu peste 5 ani de experiență în React Native, JavaScript, TypeScript și tehnologii web moderne. Specializat în crearea de aplicații scalabile, centrate pe utilizator.",
       viewWork: "Vezi Lucrările Mele",

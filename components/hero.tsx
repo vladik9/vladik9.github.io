@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useLanguage } from "@/components/language-provider";
 import { AnimatedParticles } from "@/components/animated-particles";
 import { vocabulary } from "@/lib/vocabulary";
+import { info } from "@/lib/info";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -50,9 +51,9 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-2xl md:text-3xl text-muted-foreground"
+                className="text-2xl md:text-3xl font-semibold text-accent"
               >
-                {t.hero.title}
+                {info.personal.title}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
