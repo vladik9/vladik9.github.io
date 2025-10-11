@@ -19,6 +19,12 @@ export function Hero() {
     { label: t.hero.stats.clients, value: "15+" },
     { label: t.hero.stats.successRate, value: "100%" },
   ];
+  const social = [
+    { icon: Github, href: info.personal.social.github },
+    { icon: Linkedin, href: info.personal.social.linkedin },
+    { icon: Twitter, href: info.personal.social.twitter },
+    { icon: Mail, href: info.personal.social.email },
+  ];
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4">
@@ -95,15 +101,11 @@ export function Hero() {
               transition={{ delay: 0.7 }}
               className="flex gap-4"
             >
-              {[
-                { icon: Github, href: info.personal.social.github },
-                { icon: Linkedin, href: info.personal.social.linkedin },
-                { icon: Twitter, href: info.personal.social.twitter },
-                { icon: Mail, href: info.personal.social.email },
-              ].map((social, index) => (
+              {social.map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.href}
+                  target="_blank"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8 + index * 0.1 }}
