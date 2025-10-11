@@ -8,6 +8,6 @@ export function cn(...inputs: ClassValue[]) {
 export function downloadCV() {
   const link = document.createElement('a')
   link.href = 'https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/cv/CV.pdf'
-  link.download = 'cv.pdf'
+  link.download = 'Cornici Vlad.pdf'
   link.click()
 }
