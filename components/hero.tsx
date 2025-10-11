@@ -79,7 +79,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent cursor-pointer"
                 onClick={downloadCV} >
                 {t.hero.downloadCV}
               </Button>
