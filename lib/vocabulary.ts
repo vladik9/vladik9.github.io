@@ -1,5 +1,5 @@
 export type Language = "en" | "ro" | "ru";
-
+import { info } from "./info";
 export interface Vocabulary {
   // Navigation
   nav: {
@@ -37,6 +37,7 @@ export interface Vocabulary {
     journey: {
       title: string;
       description: string;
+      cap: string;
     };
     expertise: {
       frontend: { title: string; description: string; };
@@ -46,6 +47,7 @@ export interface Vocabulary {
     };
     highlights: {
       excellence: { title: string; description: string; };
+      tools: { title: string; description: string; };
       satisfaction: { title: string; description: string; };
     };
   };
@@ -218,7 +220,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       name: "Vlad Cornici",
       title: "Senior Mobile & Web Developer",
       description:
-        "Transforming ideas into exceptional digital experiences with 5+ years of expertise in React Native, JavaScript, TypeScript, and modern web technologies. Specialized in creating scalable, user-centric applications.",
+        `Delivering high-performance digital solutions with over ${info.personal.stats.yearOfExperience} years of experience in React Native, JavaScript, TypeScript, and modern web technologies. Focused on building scalable, user-driven applications that drive business growth.`,
       viewWork: "View My Work",
       downloadCV: "Download CV",
       stats: {
@@ -232,11 +234,11 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "About Me",
       subtitle: "Get to know me better",
       description:
-        "I'm a passionate full-stack developer with over 5 years of experience crafting exceptional digital solutions. My expertise spans across mobile and web development, with a focus on creating scalable, user-friendly applications that drive business growth and deliver outstanding user experiences.",
+        `I'm a passionate full-stack developer with over ${info.personal.stats.yearOfExperience} years of experience crafting exceptional digital solutions. My expertise spans across mobile and web development, with a focus on creating scalable, user-friendly applications that drive business growth and deliver outstanding user experiences.`,
       journey: {
         title: "My Development Journey",
-        description:
-          "With over 5 years in the development field, I've evolved from a curious beginner to a seasoned professional who bridges mobile and web technologies. My passion lies in writing clean, maintainable code and creating applications that users love to interact with.",
+        description: `With over ${info.personal.stats.yearOfExperience} years in the development field, I've evolved from a curious beginner to a seasoned professional who bridges mobile and web technologies. My passion lies in writing clean, maintainable code and creating applications that users love to interact with.`,
+        cap: "   I specialize in React Native for cross-platform mobile development, modern JavaScript and TypeScript for robust applications, React.js for dynamic web interfaces, and Node.js for scalable backend services. I'm committed to staying current with emerging technologies and industry best practices.",
       },
       expertise: {
         frontend: {
@@ -261,6 +263,10 @@ export const vocabulary: Record<Language, Vocabulary> = {
           title: "Technical Excellence",
           description: "Consistently delivered high-quality, scalable solutions",
         },
+        tools: {
+          title: "Innovative Tools",
+          description: "Utilized cutting-edge tools and frameworks",
+        },
         satisfaction: {
           title: "Client Satisfaction",
           description: "100% project success rate with timely delivery",
@@ -269,7 +275,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     skills: {
       title: "Skills & Expertise",
-      subtitle: "Technologies I work with",
+      subtitle: "Technologies I work with or used it in the past",
     },
     techStack: {
       title: "Skills & Technologies",
@@ -356,7 +362,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     footer: {
       description:
-        "Passionate full-stack developer with 5+ years of experience in creating exceptional mobile and web applications. Specialized in React Native, JavaScript, and modern web technologies.",
+        `Passionate full-stack developer with ${info.personal.stats.yearOfExperience} years of experience in creating exceptional mobile and web applications. Specialized in React Native, JavaScript, and modern web technologies.`,
       quickLinks: "Quick Links",
       services: "Services",
       copyright: "All rights reserved.",
@@ -414,7 +420,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
       },
       aiResponse:
-        "Thank you for your message! This is a placeholder response. I'll get back to you shortly with a detailed answer. For immediate assistance, please use the contact form or email me directly at ghodadravivek.work@gmail.com",
+        `Thank you for your message! This is a placeholder response. I'll get back to you shortly with a detailed answer. For immediate assistance, please use the contact form or email me directly at ${info.personal.email}`,
     },
     confirmation: {
       success: "Success",
@@ -448,10 +454,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       greeting: "Bună, sunt",
       name: "Vlad Cornici",
       title: "Software Engineer | AWS Cloud Certified",
-      // TODO: Add a better description here
-      // description: "Passionate full-stack developer with 5+ years of experience in creating exceptional mobile and web applications. Specialized in FullStack development, emerging technologies like JavaScript, Java, Python and modern web technologies. Being on the same page with AI and ML updates making application and automation easier and faster. Helping clients to improve their bussines and income.",
       description:
-        "Transformând idei în experiențe digitale excepționale cu peste 5 ani de experiență în React Native, JavaScript, TypeScript și tehnologii web moderne. Specializat în crearea de aplicații scalabile, centrate pe utilizator.",
+        `Transformând idei în experiențe digitale excepționale cu peste ${info.personal.stats.yearOfExperience} ani de experiență în React Native, JavaScript, TypeScript și tehnologii web moderne. Specializat în crearea de aplicații scalabile, centrate pe utilizator.`,
       viewWork: "Vezi Lucrările Mele",
       downloadCV: "Descarcă CV",
       stats: {
@@ -465,11 +469,11 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "Despre Mine",
       subtitle: "Cunoaște-mă mai bine",
       description:
-        "Sunt un dezvoltator full-stack pasionat cu peste 5 ani de experiență în crearea de soluții digitale excepționale. Expertiza mea se întinde pe dezvoltare mobilă și web, cu accent pe crearea de aplicații scalabile, prietenoase cu utilizatorul, care stimulează creșterea afacerii și oferă experiențe de utilizator remarcabile.",
+        `Sunt un dezvoltator full-stack pasionat cu peste ${info.personal.stats.yearOfExperience} ani de experiență în crearea de soluții digitale excepționale. Expertiza mea se întinde pe dezvoltare mobilă și web, cu accent pe crearea de aplicații scalabile, prietenoase cu utilizatorul, care stimulează creșterea afacerii și oferă experiențe de utilizator remarcabile.`,
       journey: {
         title: "Călătoria Mea în Dezvoltare",
-        description:
-          "Cu peste 5 ani în domeniul dezvoltării, am evoluat de la un începător curios la un profesionist experimentat care face legătura între tehnologiile mobile și web. Pasiunea mea constă în scrierea de cod curat, ușor de întreținut și în crearea de aplicații cu care utilizatorii adoră să interacționeze.",
+        description: `Cu peste ${info.personal.stats.yearOfExperience} ani în domeniul dezvoltării, am evoluat de la un începător curios la un profesionist experimentat care face legătura între tehnologiile mobile și web. Pasiunea mea constă în scrierea de cod curat, ușor de întreținut și în crearea de aplicații cu care utilizatorii adoră să interacționeze.`,
+        cap: "Mă specializez în React Native pentru dezvoltare mobilă multi-platformă, JavaScript modern și TypeScript pentru aplicații robuste, React.js pentru interfețe web dinamice și Node.js pentru servicii backend scalabile. Mă angajez să rămân la curent cu tehnologiile emergente și cele mai bune practici din industrie.",
       },
       expertise: {
         frontend: {
@@ -494,6 +498,10 @@ export const vocabulary: Record<Language, Vocabulary> = {
           title: "Excelență Tehnică",
           description: "Livrare constantă de soluții scalabile de înaltă calitate",
         },
+        tools: {
+          title: "Instrumente & Framework-uri",
+          description: "React Native, Next.js, Node.js, Express.js, PostgreSQL",
+        },
         satisfaction: {
           title: "Satisfacția Clienților",
           description: "Rată de succes 100% cu livrare la timp",
@@ -502,7 +510,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     skills: {
       title: "Competențe & Expertiză",
-      subtitle: "Tehnologii cu care lucrez",
+      subtitle: "Tehnologii cu care lucrez sau am lucrat recent",
     },
     techStack: {
       title: "Competențe & Tehnologii",
@@ -589,7 +597,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     footer: {
       description:
-        "Dezvoltator full-stack pasionat cu peste 5 ani de experiență în crearea de aplicații mobile și web excepționale. Specializat în React Native, JavaScript și tehnologii web moderne.",
+        `Dezvoltator full-stack pasionat cu peste ${info.personal.stats.yearOfExperience} ani de experiență în crearea de aplicații mobile și web excepționale. Specializat în React Native, JavaScript și tehnologii web moderne`,
       quickLinks: "Link-uri Rapide",
       services: "Servicii",
       copyright: "Toate drepturile rezervate.",
@@ -648,7 +656,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
       },
       aiResponse:
-        "Mulțumesc pentru mesaj! Acesta este un răspuns temporar. Voi reveni în curând cu un răspuns detaliat. Pentru asistență imediată, te rog folosește formularul de contact sau trimite-mi un email direct la ghodadravivek.work@gmail.com",
+        `Mulțumesc pentru mesaj! Acesta este un răspuns temporar. Voi reveni în curând cu un răspuns detaliat. Pentru asistență imediată, te rog folosește formularul de contact sau trimite-mi un email direct la ${info.personal.email}`,
     },
     confirmation: {
       success: "Succes",
@@ -683,7 +691,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       name: "Влад Корнич",
       title: "Старший Mobile & Web Разработчик",
       description:
-        "Превращаю идеи в исключительные цифровые решения с более чем 5-летним опытом работы с React Native, JavaScript, TypeScript и современными веб-технологиями. Специализируюсь на создании масштабируемых, ориентированных на пользователя приложений.",
+        `Превращаю идеи в исключительные цифровые решения с более чем ${info.personal.stats.yearOfExperience} летним опытом работы с React Native, JavaScript, TypeScript и современными веб-технологиями. Специализируюсь на создании масштабируемых, ориентированных на пользователя приложений.`,
       viewWork: "Посмотреть Работы",
       downloadCV: "Скачать CV",
       stats: {
@@ -697,11 +705,11 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "Обо Мне",
       subtitle: "Узнайте меня лучше",
       description:
-        "Я увлеченный full-stack разработчик с более чем 5-летним опытом создания исключительных цифровых решений. Мой опыт охватывает мобильную и веб-разработку с акцентом на создание масштабируемых, удобных приложений, которые способствуют росту бизнеса и обеспечивают выдающийся пользовательский опыт.",
+        `Я увлеченный full-stack разработчик с более чем ${info.personal.stats.yearOfExperience} летним опытом создания исключительных цифровых решений. Мой опыт охватывает мобильную и веб-разработку с акцентом на создание масштабируемых, удобных приложений, которые способствуют росту бизнеса и обеспечивают выдающийся пользовательский опыт.`,
       journey: {
         title: "Мой Путь в Разработке",
-        description:
-          "За более чем 5 лет в области разработки я прошел путь от любопытного новичка до опытного профессионала, который объединяет мобильные и веб-технологии. Моя страсть заключается в написании чистого, поддерживаемого кода и создании приложений, с которыми пользователи любят взаимодействовать.",
+        description: `За более чем ${info.personal.stats.yearOfExperience} лет в области разработки я прошел путь от любопытного новичка до опытного профессионала, который объединяет мобильные и веб-технологии. Моя страсть заключается в написании чистого, поддерживаемого кода и создании приложений, с которыми пользователи любят взаимодействовать.`,
+        cap: "Я специализируюсь на React Native для кроссплатформенной мобильной разработки, современном JavaScript и TypeScript для надежных приложений, React.js для динамических веб- интерфейсов и Node.js для масштабируемых бэкенд- сервисов.Я стремлюсь быть в курсе новых технологий и передовых отраслевых практик.",
       },
       expertise: {
         frontend: {
@@ -725,6 +733,10 @@ export const vocabulary: Record<Language, Vocabulary> = {
         excellence: {
           title: "Техническое Совершенство",
           description: "Постоянная поставка высококачественных масштабируемых решений",
+        },
+        tools: {
+          title: "Инструменты",
+          description: "React Native, JavaScript, TypeScript, Node.js, Express.js, MongoDB",
         },
         satisfaction: {
           title: "Удовлетворенность Клиентов",
@@ -822,7 +834,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     footer: {
       description:
-        "Увлеченный full-stack разработчик с более чем 5-летним опытом создания исключительных мобильных и веб-приложений. Специализируюсь на React Native, JavaScript и современных веб-технологиях.",
+        `Увлеченный full-stack разработчик с более чем ${info.personal.stats.yearOfExperience} летним опытом создания исключительных мобильных и веб-приложений. Специализируюсь на React Native, JavaScript и современных веб-технологиях.`,
       quickLinks: "Быстрые Ссылки",
       services: "Услуги",
       copyright: "Все права защищены.",
@@ -881,7 +893,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
       },
       aiResponse:
-        "Спасибо за ваше сообщение! Это временный ответ. Я скоро вернусь с подробным ответом. Для немедленной помощи, пожалуйста, используйте контактную форму или напишите мне напрямую на ghodadravivek.work@gmail.com",
+        `Спасибо за ваше сообщение! Это временный ответ. Я скоро вернусь с подробным ответом. Для немедленной помощи, пожалуйста, используйте контактную форму или напишите мне напрямую на ${info.personal.email}`,
     },
     confirmation: {
       success: "Успех",

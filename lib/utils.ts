@@ -11,3 +11,8 @@ export function downloadCV() {
   link.download = 'Cornici Vlad.pdf'
   link.click()
 }
+
+export function highLightText (text: string, keyword: string) {
+  const regex = new RegExp(keyword, 'gi')
+  return text.replace(regex, (match) => `<span class="highlight">${match}</span>`)
+}

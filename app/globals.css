@@ -185,6 +185,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -227,4 +228,12 @@
 .dark .glow-card:hover {
   box-shadow: 0 8px 35px rgba(96, 165, 250, 0.3), 0 4px 12px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
+}
+
+.highlight {
+  background: linear-gradient(135deg, oklch(0.55 0.22 250), oklch(0.6 0.2 245));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }

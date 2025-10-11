@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { motion } from "framer-motion";
-import { Mail, Calendar, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, Calendar, Clock, CheckCircle2, Phone, Pin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -285,12 +285,15 @@ export function RequestQuote() {
             className="space-y-6"
           >
             {/* Contact Details */}
-            <div className="bg-card rounded-2xl p-6 shadow-lg border border-border">
+            <div className="bg-card rounded-2xl p-6 shadow-lg border border-border space-y-4">
               <h3 className="text-xl font-bold mb-4">{t.quote.contactDetails}</h3>
+
               <div className="flex items-center gap-3 p-4 bg-primary/10 rounded-lg">
                 <div className="bg-primary text-primary-foreground p-2 rounded-lg">
                   <Mail className="h-5 w-5" />
                 </div>
+
+                {/* Email */}
                 <div>
                   <p className="text-sm font-medium">{t.contact.email}</p>
                   <a href={`mailto:${info.personal.email}`} className="text-sm text-primary hover:underline">
@@ -298,6 +301,33 @@ export function RequestQuote() {
                   </a>
                 </div>
               </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-3 p-4 bg-primary/10 rounded-lg">
+                <div className="bg-primary text-primary-foreground p-2 rounded-lg">
+                  <Phone className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium">{t.contact.phone}</p>
+                  <a href={`mailto:${info.personal.phone}`} className="text-sm text-primary hover:underline">
+                    {info.personal.phone}
+                  </a>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-3 p-4 bg-primary/10 rounded-lg">
+                <div className="bg-primary text-primary-foreground p-2 rounded-lg">
+                  <Pin className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium">{t.contact.location}</p>
+                  <a href={`mailto:${info.personal.location}`} className="text-sm text-primary hover:underline">
+                    {info.personal.location}
+                  </a>
+                </div>
+              </div>
+
             </div>
 
             {/* Schedule Meeting */}

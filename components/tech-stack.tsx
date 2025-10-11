@@ -29,7 +29,7 @@ const technologies = [
   { name: "Express", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/express.svg", color: "#000000" },
   { name: "Vue.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/vuejs-colored.svg", color: "#4FC08D" },
   { name: "Java", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/java-colored.svg", color: "#DD0031" },
-  { name: "Java Fx", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/java-fx.svg", color: "#DD0031" },
+  { name: "JUnit", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/junit.svg", color: "#DD0031" },
   { name: "Spring Boot", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/springboot-colored.svg", color: "#DD0031" },
   { name: "MySQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mysql-colored.svg", color: "#02569B" },
   { name: "Python", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/python-colored.svg", color: "#3776AB" },
@@ -52,6 +52,7 @@ const technologies = [
   { name: "Apache", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/apache.svg", color: "#2496ED" },
   { name: "NGinx", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nginx.svg", color: "#2496ED" },
   { name: "Material UI", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mui.svg", color: "#2496ED" },
+  { name: "Shadcn UI", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/shadcnui.svg", color: "#2496ED" },
   { name: "Digital Ocean", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/digitalocean-colored.svg", color: "#2496ED" },
   { name: "Oracle", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/oracle-colored.svg", color: "#2496ED" },
   { name: "Adobe Photoshop", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/photoshop-colored.svg", color: "#2496ED" },
@@ -61,6 +62,7 @@ const technologies = [
   { name: "Laravel", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/laravel-colored.svg", color: "#2496ED" },
   { name: "VsCode", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/visualstudiocode-colored.svg", color: "#2496ED" },
   { name: "n8n", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/n8n.svg", color: "#2496ED" },
+
 
 ];
 

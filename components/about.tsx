@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { Code2, Smartphone, Server, Layers } from "lucide-react"
-import { useLanguage } from "@/components/language-provider"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Code2, Smartphone, Server, Layers } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 export function About() {
-  const { t } = useLanguage()
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const { t } = useLanguage();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const features = [
     {
@@ -32,7 +32,7 @@ export function About() {
       title: t.about.expertise.fullstack.title,
       description: t.about.expertise.fullstack.description,
     },
-  ]
+  ];
 
   return (
     <section id="about" ref={ref} className="py-20 px-4">
@@ -75,9 +75,7 @@ export function About() {
             <h3 className="text-3xl font-bold">{t.about.journey.title}</h3>
             <p className="text-muted-foreground leading-relaxed">{t.about.journey.description}</p>
             <p className="text-muted-foreground leading-relaxed">
-              I specialize in React Native for cross-platform mobile development, modern JavaScript and TypeScript for
-              robust applications, React.js for dynamic web interfaces, and Node.js for scalable backend services. I'm
-              committed to staying current with emerging technologies and industry best practices.
+              {t.about.journey.cap}
             </p>
           </motion.div>
 
@@ -92,6 +90,10 @@ export function About() {
               <p className="text-sm text-muted-foreground">{t.about.highlights.excellence.description}</p>
             </div>
             <div className="bg-card border border-border rounded-xl p-6 glow-card">
+              <h4 className="text-xl font-semibold mb-2 text-secondary">{t.about.highlights.tools.title}</h4>
+              <p className="text-sm text-muted-foreground">{t.about.highlights.tools.description}</p>
+            </div>
+            <div className="bg-card border border-border rounded-xl p-6 glow-card">
               <h4 className="text-xl font-semibold mb-2 text-secondary">{t.about.highlights.satisfaction.title}</h4>
               <p className="text-sm text-muted-foreground">{t.about.highlights.satisfaction.description}</p>
             </div>
@@ -99,5 +101,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

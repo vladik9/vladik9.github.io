@@ -8,7 +8,7 @@ import { useLanguage } from "@/components/language-provider";
 import { AnimatedParticles } from "@/components/animated-particles";
 import { vocabulary } from "@/lib/vocabulary";
 import { info } from "@/lib/info";
-import { downloadCV } from "@/lib/utils";
+import { downloadCV, highLightText } from "@/lib/utils";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -62,7 +62,10 @@ export function Hero() {
                 transition={{ delay: 0.5 }}
                 className="text-lg text-muted-foreground leading-relaxed text-pretty"
               >
-                {t.hero.description}
+                {/* {t.hero.description} */}
+                {/* NOTE: this is where the highlighted text will be inserted */}
+                <div dangerouslySetInnerHTML={{ __html: highLightText(t.hero.description, info.personal.stats.yearOfExperience) }} />
+
               </motion.p>
             </motion.div>
 

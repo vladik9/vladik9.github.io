@@ -25,7 +25,9 @@ export default function Home() {
       <Education />
       <Certifications />
       <Projects />
-      <Contact />
+      {/* TODO: check if future if we still need this */}
+      {/* Hide for moment */}
+      {/* <Contact /> */}
       <RequestQuote />
       <Footer />
       <ScrollToTop />

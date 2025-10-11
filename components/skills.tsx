@@ -1,22 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { useLanguage } from "@/components/language-provider"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { useLanguage } from "@/components/language-provider";
+import { info } from "@/lib/info";
 
-const skills = [
-  { name: "React Native", level: 95 },
-  { name: "JavaScript/TypeScript", level: 90 },
-  { name: "React.js/Next.js", level: 85 },
-  { name: "Node.js/Backend", level: 80 },
-  { name: "UI/UX Design", level: 75 },
-]
+const skills = info.personal.skills;
 
 export function Skills() {
-  const { t } = useLanguage()
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const { t } = useLanguage();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="skills" ref={ref} className="py-20 px-4 bg-card/30">
@@ -57,5 +52,5 @@ export function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }
