@@ -7,12 +7,13 @@ export const info = {
     email: "v.cornici@gamil.com",
     location: "Suceava, Romania",
     social: {
-      linkedin: "https://www.linkedin.com/in/vladcornici/",
+      linkedin: "https://www.linkedin.com/in/cornici-vlad",
       github: "https://github.com/vladik9",
-      twitter: "https://twitter.com/vladik9",
+      twitter: "https://x.com/CorniciI",
       email: "v.cornici@gamil.com",
-      facebook: "https://www.facebook.com/vladik9",
-      calendly: "https://callendly.com/vladik9",
+      facebook: "https://www.facebook.com/cornici.vlad",
+      calendly: "https://callendly.com/v-cornici",
+      discord: "https://discordapp.com/users/dexy_96"
     },
     services: {
 

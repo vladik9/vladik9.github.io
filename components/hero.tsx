@@ -8,6 +8,7 @@ import { useLanguage } from "@/components/language-provider";
 import { AnimatedParticles } from "@/components/animated-particles";
 import { vocabulary } from "@/lib/vocabulary";
 import { info } from "@/lib/info";
+import { downloadCV } from "@/lib/utils";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -79,7 +80,7 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
-              >
+                onClick={downloadCV} >
                 {t.hero.downloadCV}
               </Button>
             </motion.div>
