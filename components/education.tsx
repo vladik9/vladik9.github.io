@@ -64,7 +64,7 @@ export function Education() {
                       <h4 className="font-semibold mb-2 text-primary md:text-left">{t.experience.achievements}</h4>
                       <ul className="space-y-1">
                         {edu.achievements.map((achievement, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <li key={i} className="text-sm text-muted-foreground flex items-start gap-2 md:text-left">
                             <span className="text-primary mt-1">•</span>
                             <span>{achievement}</span>
                           </li>

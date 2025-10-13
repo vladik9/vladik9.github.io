@@ -18,7 +18,7 @@
   --secondary-foreground: oklch(0.99 0 0);
 
   /* Card with subtle background */
-  --card: oklch(0.97 0 0);
+  --card: #ffffff;
   --card-foreground: oklch(0.2 0.02 240);
 
   /* Muted elements */

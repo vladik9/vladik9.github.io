@@ -1,69 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { Award, Calendar } from "lucide-react"
-import { useLanguage } from "./language-provider"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Award, Calendar } from "lucide-react";
+import { useLanguage } from "./language-provider";
+import { info } from "@/lib/info";
 
-const certifications = [
-  {
-    year: "2024",
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    description: "Professional certification demonstrating expertise in designing distributed systems on AWS platform.",
-    credential: "AWS-SA-2024-12345",
-  },
-  {
-    year: "2023",
-    title: "Meta React Native Specialist",
-    issuer: "Meta (Facebook)",
-    description:
-      "Advanced certification in React Native development, covering performance optimization and best practices.",
-    credential: "META-RN-2023-67890",
-  },
-  {
-    year: "2023",
-    title: "Google Cloud Professional Developer",
-    issuer: "Google Cloud",
-    description: "Certification validating skills in building scalable applications using Google Cloud technologies.",
-    credential: "GCP-DEV-2023-54321",
-  },
-  {
-    year: "2022",
-    title: "MongoDB Certified Developer",
-    issuer: "MongoDB University",
-    description: "Professional certification in MongoDB database design, development, and optimization.",
-    credential: "MONGO-DEV-2022-98765",
-  },
-]
-
-const awards = [
-  {
-    year: "2024",
-    title: "Best Mobile App Innovation",
-    issuer: "Tech Excellence Awards",
-    description: "Recognized for developing an innovative mobile solution that improved user engagement by 300%.",
-  },
-  {
-    year: "2023",
-    title: "Developer of the Year",
-    issuer: "Vision Infotech",
-    description:
-      "Awarded for outstanding contributions to multiple successful projects and mentoring junior developers.",
-  },
-  {
-    year: "2022",
-    title: "Hackathon Winner - FinTech Category",
-    issuer: "National Coding Championship",
-    description: "First place in developing a revolutionary payment solution during 48-hour hackathon.",
-  },
-]
-
+const certifications = info.certifications;
+const awards = info.awards;
 export function Certifications() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const { t } = useLanguage()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="certifications" ref={ref} className="py-20 px-4">
@@ -148,5 +97,5 @@ export function Certifications() {
         </div>
       </div>
     </section>
-  )
+  );
 }

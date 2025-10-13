@@ -33,7 +33,7 @@ export function AnimatedParticles() {
     updateCanvasSize();
     window.addEventListener("resize", updateCanvasSize);
 
-    const particleCount = 35;
+    const particleCount = 100;
     const colors = ["#3b82f6", "#06b6d4", "#8b5cf6", "#ec4899", "#f59e0b"];
 
     particlesRef.current = Array.from({ length: particleCount }, () => ({

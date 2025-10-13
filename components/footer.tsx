@@ -5,14 +5,14 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, Linkedin, Twitter, Mail, Facebook, Dribbble, Heart } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
-
+import { currentYear } from "@/lib/utils";
+import { info } from "@/lib/info";
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Mail, href: "#", label: "Email" },
-  { icon: Github, href: "#", label: "Github" },
-  { icon: Dribbble, href: "#", label: "Dribbble" },
+  { icon: Linkedin, href: info.personal.social.linkedin, label: "LinkedIn" },
+  { icon: Facebook, href: info.personal.social.facebook, label: "Facebook" },
+  { icon: Twitter, href: info.personal.social.twitter, label: "Twitter" },
+  { icon: Mail, href: info.personal.social.email, label: "Email" },
+  { icon: Github, href: info.personal.social.github, label: "Github" },
 ];
 
 export function Footer() {
@@ -21,13 +21,14 @@ export function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const quickLinks = [
-    { label: t.nav.home, href: "home" },
-    { label: t.nav.about, href: "about" },
-    { label: t.nav.skills, href: "skills" },
-    { label: t.nav.education, href: "education" },
-    { label: t.nav.experience, href: "experience" },
-    { label: t.nav.projects, href: "projects" },
-    { label: t.nav.contact, href: "contact" },
+    { name: t.nav.home, href: "#home" },
+    { name: t.nav.about, href: "#about" },
+    { name: t.nav.skills, href: "#skills" },
+    { name: t.nav.experience, href: "#experience" },
+    { name: t.nav.education, href: "#education" },
+    { name: t.nav.certifications, href: "#certifications" },
+    { name: t.nav.projects, href: "#projects" },
+
   ];
 
   const services = ["Mobile Development", "Web Development", "Full-Stack Solutions", "UI/UX Design"];
@@ -72,8 +73,8 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={`#${link.href}`} className="text-muted-foreground hover:text-primary transition-colors">
-                    {link.label}
+                  <a href={`${link.href}`} className="text-muted-foreground hover:text-primary transition-colors">
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -104,9 +105,9 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p className="text-sm text-muted-foreground">© 2025 Vlad Cornici. {t.footer.copyright}</p>
+          <p className="text-sm text-muted-foreground">© {currentYear()} {info.personal.name}. {t.footer.copyright}</p>
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            {t.footer.madeWith} <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using React & TypeScript
+            {t.footer.madeWith} {t.footer.forPersonalUse.toLowerCase()}
           </p>
         </motion.div>
       </div>

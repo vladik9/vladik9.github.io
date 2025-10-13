@@ -79,6 +79,8 @@ export interface Vocabulary {
     title: string;
     subtitle: string;
     details: string;
+    professionalCertifications: string;
+    awardsRecognition: string;
   };
   // Projects Section
   projects: {
@@ -148,6 +150,7 @@ export interface Vocabulary {
     services: string;
     copyright: string;
     madeWith: string;
+    forPersonalUse: string;
   };
   // Chat Modal Section
   chat: {
@@ -297,6 +300,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "Certifications & Awards",
       subtitle: "Professional certifications and recognition for excellence in software development and technology.",
       details: "Details",
+      professionalCertifications: "Professional Certifications",
+      awardsRecognition: "Awards & Recognition",
     },
     projects: {
       title: "Featured Projects",
@@ -366,7 +371,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       quickLinks: "Quick Links",
       services: "Services",
       copyright: "All rights reserved.",
-      madeWith: "Made with",
+      madeWith: "Made for",
+      forPersonalUse: "for personal use",
     }, chat: {
       title: "AI Assistant",
       subtitle: "Always here to help",
@@ -532,6 +538,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "Certificări & Premii",
       subtitle: "Certificări profesionale și recunoaștere pentru excelență în dezvoltarea de software și tehnologie.",
       details: "Detalii",
+      professionalCertifications: "Certificări Profesionale",
+      awardsRecognition: "Premii & Recunoșteri",
     },
     projects: {
       title: "Proiecte Prezentate",
@@ -601,7 +609,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       quickLinks: "Link-uri Rapide",
       services: "Servicii",
       copyright: "Toate drepturile rezervate.",
-      madeWith: "Realizat cu",
+      madeWith: "Realizat pentru",
+      forPersonalUse: "Pentru utilizare personala",
     },
     chat: {
       title: "Asistent AI",
@@ -769,6 +778,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       subtitle:
         "Профессиональные сертификаты и признание за отличие в разработке программного обеспечения и технологиях.",
       details: "Детали",
+      professionalCertifications: "Профессиональные Сертификаты",
+      awardsRecognition: "Награды и Распознавание",
     },
     projects: {
       title: "Избранные Проекты",
@@ -838,7 +849,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       quickLinks: "Быстрые Ссылки",
       services: "Услуги",
       copyright: "Все права защищены.",
-      madeWith: "Сделано с",
+      madeWith: "Сделано для",
+      forPersonalUse: "Для личного использования",
     },
     chat: {
       title: "AI Ассистент",

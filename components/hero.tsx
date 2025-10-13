@@ -14,10 +14,10 @@ export function Hero() {
   const { t } = useLanguage();
 
   const stats = [
-    { label: t.hero.stats.experience, value: "5+" },
-    { label: t.hero.stats.projects, value: "23+" },
-    { label: t.hero.stats.clients, value: "15+" },
-    { label: t.hero.stats.successRate, value: "100%" },
+    { label: t.hero.stats.experience, value: info.personal.stats.yearOfExperience },
+    { label: t.hero.stats.projects, value: info.personal.stats.projects },
+    { label: t.hero.stats.clients, value: info.personal.stats.clients },
+    { label: t.hero.stats.successRate, value: info.personal.stats.successRate },
   ];
   const social = [
     { icon: Github, href: info.personal.social.github },
@@ -127,7 +127,7 @@ export function Hero() {
             >
               <div className="relative">
                 {/* Particles background */}
-                <div className="absolute -inset-8 pointer-events-none">
+                <div className="absolute -inset-9 pointer-events-none">
                   <AnimatedParticles />
                 </div>
 
