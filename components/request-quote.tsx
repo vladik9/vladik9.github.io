@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { motion } from "framer-motion";
-import { Mail, Calendar, Clock, CheckCircle2, Phone, Pin } from "lucide-react";
+import { Mail, Clock, CheckCircle2, Phone, Pin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,6 +11,7 @@ import { useState } from "react";
 import { useLanguage } from "./language-provider";
 import { ConfirmationModal } from "./confirmation-modal";
 import { info } from "@/lib/info";
+import CalendlyButton from "./CalendlyButton";
 
 const budgetRanges = [
   "Under $5,000",
@@ -138,7 +139,7 @@ export function RequestQuote() {
                     <label className="block text-sm font-medium mb-2">{t.quote.form.phone}</label>
                     <Input
                       type="tel"
-                      placeholder="+91 88660 22789"
+                      placeholder="+40 123 123 123"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -336,21 +337,13 @@ export function RequestQuote() {
                 <div>
                   <h3 className="text-xl font-bold">{info.personal.name}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.
+                    {t.calendly.scheduleMeeting}
                   </p>
                 </div>
               </div>
 
               <div className="border-t border-border pt-4 mt-4">
-                <div className="flex items-center gap-3 p-3 hover:bg-accent rounded-lg cursor-pointer transition-colors">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  <div className="flex-1">
-                    <p className="font-medium">Coffee in person / Video call</p>
-                    <p className="text-sm text-muted-foreground">
-                      Let's meet over coffee to discuss project ideas, tech stack, or growth plans.
-                    </p>
-                  </div>
-                </div>
+                <CalendlyButton />
               </div>
             </div>
 
@@ -362,14 +355,14 @@ export function RequestQuote() {
                   <div className="flex items-center justify-center mb-2">
                     <Clock className="h-8 w-8" />
                   </div>
-                  <p className="text-2xl font-bold">&lt; 2h</p>
+                  <p className="text-2xl font-bold">&lt; {info.personal.contact.mailTime}</p>
                   <p className="text-sm opacity-90">{t.quote.response.email}</p>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center mb-2">
                     <CheckCircle2 className="h-8 w-8" />
                   </div>
-                  <p className="text-2xl font-bold">24h</p>
+                  <p className="text-2xl font-bold">{info.personal.contact.detailedResponse}</p>
                   <p className="text-sm opacity-90">{t.quote.response.detailed}</p>
                 </div>
               </div>
@@ -377,6 +370,7 @@ export function RequestQuote() {
           </motion.div>
         </div>
       </div>
+      {/* TODO: add therms of usage and marketing policy */}
       <ConfirmationModal
         isOpen={showConfirmation}
         onClose={() => setShowConfirmation(false)}

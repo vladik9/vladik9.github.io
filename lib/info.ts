@@ -5,7 +5,7 @@ export const info = {
     title: "a Software Engineer",
     description: "",
     phone: "+40771563568",
-    email: "v.cornici@gamil.com",
+    email: "v.cornici@gmail.com",
     location: "Suceava, Romania, (remote)",
     social: {
       linkedin: "https://www.linkedin.com/in/cornici-vlad",
@@ -21,9 +21,13 @@ export const info = {
     },
     stats: {
       yearOfExperience: "5+",
-      projects: "20",
+      projects: "15",
       clients: "10+",
       successRate: "100%"
+    },
+    contact: {
+      mailTime: "6h",
+      detailedResponse: "24-48h"
     },
     skills: [
       { name: "JavaScript/TypeScript", level: 90, levelString: "Expert" },

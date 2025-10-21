@@ -200,6 +200,11 @@ export interface Vocabulary {
       send: string,
     };
   };
+  calendly: {
+    scheduleMeeting: string;
+    requestQuote: string;
+    requestQuoteDescription: string;
+  };
   // Quote Request Section
   quote: {
     title: string;
@@ -578,6 +583,11 @@ export const vocabulary: Record<Language, Vocabulary> = {
         send: "Send Message",
 
       },
+    },
+    calendly: {
+      scheduleMeeting: "Schedule a Meeting",
+      requestQuote: "Request a Quote",
+      requestQuoteDescription: "Need a detailed project quote? Fill out the form and I'll get back to you within 24 hours.",
     },
     quote: {
       title: "Request a Personalized Quote",
@@ -972,6 +982,11 @@ export const vocabulary: Record<Language, Vocabulary> = {
 
       },
     },
+    calendly: {
+      scheduleMeeting: "Programează o Întâlnire",
+      requestQuote: "Solicită o Ofertă",
+      requestQuoteDescription: "Ai nevoie de o ofertă detaliată pentru proiect? Completează formularul și îți voi răspunde în maximum 24 de ore.",
+    },
     quote: {
       title: "Solicită o Ofertă Personalizată",
       subtitle:
@@ -1010,7 +1025,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
     },
     footer: {
       description:
-        `Dezvoltator full-stack pasionat cu peste ${info.personal.stats.yearOfExperience} ani de experiență în crearea de aplicații mobile și web excepționale. Specializat în React Native, JavaScript și tehnologii web moderne`,
+        `Dezvoltator full-stack pasionat cu peste ${info.personal.stats.yearOfExperience} ani de experiență în crearea de aplicații mobile și web excepționale. Specializat în React Native, JavaScript și tehnologii web moderne.`,
       quickLinks: "Link-uri Rapide",
       services: "Servicii",
       copyright: "Toate drepturile rezervate.",
@@ -1364,6 +1379,11 @@ export const vocabulary: Record<Language, Vocabulary> = {
         send: "Отправить Сообщение",
 
       },
+    },
+    calendly: {
+      scheduleMeeting: "Запланировать Встречу",
+      requestQuote: "Запросить Предложение",
+      requestQuoteDescription: "Нужна подробная смета для проекта? Заполните форму, и я отвечу вам в течение 24 часов.",
     },
     quote: {
       title: "Запросить Персонализированное Предложение",
