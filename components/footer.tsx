@@ -30,7 +30,7 @@ export function Footer() {
     { name: t.nav.projects, href: "#projects" },
 
   ];
-
+  // TODO: Update this to be dynamic based on info.ts and fix any missing services
   const services = ["Mobile Development", "Web Development", "Full-Stack Solutions", "UI/UX Design"];
 
   return (

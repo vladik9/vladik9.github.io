@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/components/language-provider"
-import Image from "next/image"
-
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/language-provider";
+import Image from "next/image";
+// TODO: Update this projects list to be dynamic from info.ts
+// should be my projects I've worked on
 const projects = [
   {
     title: "SignSpot",
@@ -63,12 +64,12 @@ const projects = [
     status: "development",
     image: "/community-app-with-news-feed-and-member-resources.jpg",
   },
-]
+];
 
 export function Projects() {
-  const { t } = useLanguage()
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const { t } = useLanguage();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="projects" ref={ref} className="py-20 px-4 bg-card/30">
@@ -146,5 +147,5 @@ export function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
