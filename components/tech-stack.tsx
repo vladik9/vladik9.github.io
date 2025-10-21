@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useLanguage } from "./language-provider";
 
 const technologies = [
   { name: "C", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/c-colored.svg", color: "#61DAFB" },
@@ -68,6 +69,7 @@ const technologies = [
 ];
 
 export function TechStack() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -81,10 +83,10 @@ export function TechStack() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Skills & <span className="gradient-text">Technologies</span>
+            {t.techStack.mainTitle} & <span className="gradient-text"> {t.techStack.technologiesTitle}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Technologies and frameworks I use to build exceptional applications
+            {t.techStack.experienceDescription}
           </p>
         </motion.div>
 
@@ -118,10 +120,9 @@ export function TechStack() {
                   <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors align-text-top flex items-center justify-center pb-4">
                     {tech.name}
                   </span>
-
                 </div>
-
               </div>
+
             </motion.div>
           ))}
         </div>

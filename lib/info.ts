@@ -26,14 +26,15 @@ export const info = {
       successRate: "100%"
     },
     skills: [
-      { name: "JavaScript/TypeScript", level: 90 },
-      { name: "React.js/Next.js", level: 85 },
-      { name: "Node.js/Backend", level: 80 },
-      { name: "UI/UX Design", level: 75 },
-      { name: "React Native", level: 50 },
-      { name: "Java/Spring", level: 70 },
-      { name: "C/C++", level: 60 },
-      { name: "Python", level: 50 },
+      { name: "JavaScript/TypeScript", level: 90, levelString: "Expert" },
+      { name: "React.js/Next.js", level: 85, levelString: "Expert" },
+      { name: "Node.js/Backend", level: 80, levelString: "Expert" },
+      { name: "Nest.js/Backend", level: 75, levelString: "Expert" },
+      { name: "UI/UX Design", level: 75, levelString: "Expert" },
+      { name: "Java/Spring", level: 70, levelString: "Expert" },
+      { name: "React Native", level: 50, levelString: "Intermediate" },
+      { name: "Python", level: 50, levelString: "Intermediate" },
+      { name: "C/C++", level: 50, levelString: "Intermediate" },
     ]
   },
   // TODO: Make this to be translated
@@ -102,90 +103,4 @@ export const info = {
       technologies: ["JavaScript", "Cypress", "REST APIs", "Testing documentation"],
     },
   ],
-  // Education
-  // TODO: review this and in some case make it translated
-  education: [
-    {
-      period: "2018 - 2020",
-      degree: "Master's degree",
-      institution: "Universitatea „Ștefan cel Mare” Suceava",
-      location: "Suceava, Romania",
-      description:
-        "Studying telecommunications network technologies and working on a VLC project for a master's degree. Researching network penetration testing and network vulnerabilities.",
-      achievements: [
-        "Pursuing a master's degree in Telecommunications Network Technologies.",
-        "Developing a VLC-based project focused on network communication systems.",
-        "Researching network penetration testing and analyzing security vulnerabilities."
-      ],
-      subjects: ["Data Structures", "Algorithms", "Mobile Development", "Web Technologies"],
-    },
-    {
-      period: "2015 - 2017",
-      degree: "Telecommunications Engineering",
-      institution: "Universitatea Tehnică a Moldovei",
-      location: "Chișinău, Moldova",
-      description: "Completed higher secondary education with focus on Mathematics, Physics, and Computer Science.",
-      achievements: [
-        "Studying communication technologies using radio and optical transmission methods.",
-        "Developing simulation-based projects involving radio and optical systems.",
-        "Designing and implementing telecommunication projects focused on practical applications."
-      ],
-      subjects: ["Mathematics", "Physics", "Chemistry", "Computer Science"],
-    },
-  ],
-  // TODO: Working here
-  certifications: [
-    {
-      year: "2024",
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      description: "Professional certification demonstrating expertise in designing distributed systems on AWS platform.",
-      credential: "AWS-SA-2024-12345",
-    },
-    {
-      year: "2023",
-      title: "Meta React Native Specialist",
-      issuer: "Meta (Facebook)",
-      description:
-        "Advanced certification in React Native development, covering performance optimization and best practices.",
-      credential: "META-RN-2023-67890",
-    },
-    {
-      year: "2023",
-      title: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      description: "Certification validating skills in building scalable applications using Google Cloud technologies.",
-      credential: "GCP-DEV-2023-54321",
-    },
-    {
-      year: "2022",
-      title: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
-      description: "Professional certification in MongoDB database design, development, and optimization.",
-      credential: "MONGO-DEV-2022-98765",
-    },
-  ],
-
-  awards: [
-    {
-      year: "2024",
-      title: "Best Mobile App Innovation",
-      issuer: "Tech Excellence Awards",
-      description: "Recognized for developing an innovative mobile solution that improved user engagement by 300%.",
-    },
-    {
-      year: "2023",
-      title: "Developer of the Year",
-      issuer: "Vision Infotech",
-      description:
-        "Awarded for outstanding contributions to multiple successful projects and mentoring junior developers.",
-    },
-    {
-      year: "2022",
-      title: "Hackathon Winner - FinTech Category",
-      issuer: "National Coding Championship",
-      description: "First place in developing a revolutionary payment solution during 48-hour hackathon.",
-    },
-  ]
-
 };

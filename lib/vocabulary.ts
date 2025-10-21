@@ -44,11 +44,13 @@ export interface Vocabulary {
       mobile: { title: string; description: string; };
       backend: { title: string; description: string; };
       fullstack: { title: string; description: string; };
+      cloud: { title: string; description: string; };
     };
     highlights: {
       excellence: { title: string; description: string; };
       tools: { title: string; description: string; };
       satisfaction: { title: string; description: string; };
+      improvement: { title: string; description: string; };
     };
   };
   // Skills Section
@@ -58,6 +60,9 @@ export interface Vocabulary {
   };
   // Tech Stack Section
   techStack: {
+    mainTitle: string;
+    technologiesTitle: string;
+    experienceDescription: string;
     title: string;
     subtitle: string;
   };
@@ -73,6 +78,28 @@ export interface Vocabulary {
     title: string;
     subtitle: string;
     subjects: string;
+    licenseDegree: {
+      year: string;
+      title: string;
+      institution: string;
+      location: string;
+      smallDescription: string;
+      achievementsTitle: string;
+      achievements: string[];
+      subjectsTitle: string;
+      subjects: string[];
+    };
+    masterDegree: {
+      year: string;
+      title: string;
+      institution: string;
+      location: string;
+      smallDescription: string;
+      achievementsTitle: string;
+      achievements: string[];
+      subjectsTitle: string;
+      subjects: string[];
+    };
   };
   // Certifications Section
   certifications: {
@@ -81,7 +108,44 @@ export interface Vocabulary {
     details: string;
     professionalCertifications: string;
     awardsRecognition: string;
+    certificationsArray: [
+      {
+        year: string;
+        title: string;
+        issuer: string;
+        description: string;
+        credential: string;
+      },
+      {
+        year: string;
+        title: string;
+        issuer: string;
+        description: string;
+        credential: string;
+      },
+      {
+        year: string;
+        title: string;
+        issuer: string;
+        description: string;
+        credential: string;
+      },
+      {
+        year: string;
+        title: string;
+        issuer: string;
+        description: string;
+        credential: string;
+      }
+    ];
   };
+  awards: [
+    {
+      year: string;
+      title: string;
+      issuer: string;
+      description: string;
+    }];
   // Projects Section
   projects: {
     title: string;
@@ -239,14 +303,14 @@ export const vocabulary: Record<Language, Vocabulary> = {
       description:
         `I'm a passionate full-stack developer with over ${info.personal.stats.yearOfExperience} years of experience crafting exceptional digital solutions. My expertise spans across mobile and web development, with a focus on creating scalable, user-friendly applications that drive business growth and deliver outstanding user experiences.`,
       journey: {
-        title: "My Development Journey",
-        description: `With over ${info.personal.stats.yearOfExperience} years in the development field, I've evolved from a curious beginner to a seasoned professional who bridges mobile and web technologies. My passion lies in writing clean, maintainable code and creating applications that users love to interact with.`,
-        additionalDescription: "I specialize in React Native for cross-platform mobile development, modern JavaScript and TypeScript for robust applications, React.js for dynamic web interfaces, and Node.js for scalable backend services. I'm committed to staying current with emerging technologies and industry best practices.",
+        title: "My journey in Software Engineering",
+        description: `With over ${info.personal.stats.yearOfExperience} of experience in software development, I began my journey by mastering the fundamentals of programming and software engineering. Driven by curiosity about how things work and why they work the way they do, I explored various programming languages and frameworks. Over time, I’ve grown from a curious beginner into a seasoned professional, developing applications that address real-world needs and deliver meaningful value to users. My passion lies in writing clean, maintainable code and building intuitive, engaging applications that people love to use.`,
+        additionalDescription: "I strive to remain versatile and not limit myself to one or two programming languages. Programming languages are tools, and as a good software engineer, I believe in choosing the right tools for each task. While many things can be built using any language, the choices we make today should serve as an advantage in the future, not a limitation. The tools I most enjoy and have extensive experience with are JavaScript, Java, and Python. JavaScript powers the web (and even mobile), Java runs on billions of devices worldwide, and Python is simply fun and powerful for rapid development and experimentation.I’m committed to staying up to date with emerging technologies and industry best practices, continuously learning and improving every day.",
       },
       expertise: {
         frontend: {
           title: "Frontend Development",
-          description: "React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3",
+          description: "React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3, WordPress",
         },
         mobile: {
           title: "Mobile Development",
@@ -254,12 +318,16 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
         backend: {
           title: "Backend Development",
-          description: "Node.js, Express.js, RESTful APIs, Database Design",
+          description: "Node.js, Express.js, Spring Boot, RESTful APIs, Database Design",
         },
         fullstack: {
           title: "Full-Stack Solutions",
           description: "End-to-end development, DevOps, Cloud Integration",
         },
+        cloud: {
+          title: "Cloud Solutions",
+          description: "AWS, Azure, Google Cloud",
+        }
       },
       highlights: {
         excellence: {
@@ -274,6 +342,10 @@ export const vocabulary: Record<Language, Vocabulary> = {
           title: "Client Satisfaction",
           description: "100% project success rate with timely delivery",
         },
+        improvement: {
+          title: "Continuous Improvement",
+          description: "Always striving for excellence and innovation",
+        },
       },
     },
     skills: {
@@ -283,6 +355,9 @@ export const vocabulary: Record<Language, Vocabulary> = {
     techStack: {
       title: "Skills & Technologies",
       subtitle: "Modern tools and frameworks I use to build exceptional applications",
+      mainTitle: "Skills",
+      technologiesTitle: "Technologies",
+      experienceDescription: "Technologies and frameworks I use to build exceptional applications",
     },
     experience: {
       title: "Experience",
@@ -295,6 +370,46 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "Education",
       subtitle: "My academic background and qualifications in computer science and software engineering.",
       subjects: "Key Subjects",
+      licenseDegree: {
+        year: "2014 - 2018",
+        title: "License's degree",
+        institution: "Universitatea Tehnică a Moldovei",
+        location: "Chișinău, Moldova",
+        smallDescription: "Completed higher secondary education with focus on Mathematics, Physics, and Computer Science.",
+        achievementsTitle: "Achievements",
+        achievements: [
+          "Studying communication technologies using radio and optical transmission methods.",
+          "Developing simulation-based projects involving radio and optical systems.",
+          "Designing and implementing telecommunication projects focused on practical applications."
+        ],
+        subjectsTitle: "Subjects",
+        subjects: [
+          "Mathematics",
+          "Physics",
+          "Chemistry",
+          "Computer Science"
+        ],
+      },
+      masterDegree: {
+        year: "2018 - 2020",
+        title: "Master's degree",
+        institution: "Universitatea „Ștefan cel Mare” Suceava",
+        location: "Suceava, Romania",
+        smallDescription: "Studying telecommunications network technologies and working on a VLC project for a master's degree. Researching network penetration testing and network vulnerabilities.",
+        achievementsTitle: "Achievements",
+        achievements: [
+          "Pursuing a master's degree in Telecommunications Network Technologies.",
+          "Developing a VLC-based project focused on network communication systems.",
+          "Researching network penetration testing and analyzing security vulnerabilities."
+        ],
+        subjectsTitle: "Subjects",
+        subjects: [
+          "Data Structures",
+          "Algorithms",
+          "Mobile Development",
+          "Web Technologies"
+        ],
+      },
     },
     certifications: {
       title: "Certifications & Awards",
@@ -302,6 +417,40 @@ export const vocabulary: Record<Language, Vocabulary> = {
       details: "Details",
       professionalCertifications: "Professional Certifications",
       awardsRecognition: "Awards & Recognition",
+      certificationsArray: [
+        {
+          year: "2024",
+          title: "AWS Certified Cloud Practitioner",
+          issuer: "Amazon Web Services",
+          description: "Professional certification demonstrating expertise in designing distributed systems on AWS platform.",
+          credential: "AWS-SA-2024-5dbf9046",
+        },
+        {
+          year: "2022",
+          title: "Certified Associate Configurator",
+          issuer: "Unqork",
+          description:
+            "Unqork certification in Unqork platform development, covering performance optimization and best practices using this platform.",
+          credential: "UNQORK-RN-2022-ef6f4d8e",
+        },
+        {
+          year: "2020",
+          title: "C",
+          issuer: "SoloLearn",
+          description:
+            "SoloLearn certification in C programming, covering language fundamentals and best practices.",
+          credential: "SOLO-RN-2020-ef6f4d8e",
+        },
+        {
+          year: "2022",
+          title: "C++",
+          issuer: "SoloLearn",
+          description:
+            "SoloLearn certification in C++ programming, covering language fundamentals and best practices.",
+          credential: "SOLO-RN-2020-ef6f4d8e",
+        },
+
+      ],
     },
     projects: {
       title: "Featured Projects",
@@ -309,6 +458,14 @@ export const vocabulary: Record<Language, Vocabulary> = {
       viewProject: "View Project",
       inDevelopment: "In Development",
     },
+    awards: [
+      {
+        year: "2022",
+        title: "Expleo CUE Award",
+        issuer: "Associated with Expleo Group",
+        description: "CUE Unique Award 2022 @ Expleo Group",
+      },
+    ],
     contact: {
       title: "Get In Touch",
       subtitle:
@@ -477,26 +634,30 @@ export const vocabulary: Record<Language, Vocabulary> = {
       description:
         `Sunt un dezvoltator full-stack pasionat cu peste ${info.personal.stats.yearOfExperience} ani de experiență în crearea de soluții digitale excepționale. Expertiza mea se întinde pe dezvoltare mobilă și web, cu accent pe crearea de aplicații scalabile, prietenoase cu utilizatorul, care stimulează creșterea afacerii și oferă experiențe de utilizator remarcabile.`,
       journey: {
-        title: "Călătoria Mea în Dezvoltare",
-        description: `Cu peste ${info.personal.stats.yearOfExperience} ani în domeniul dezvoltării, am evoluat de la un începător curios la un profesionist experimentat care face legătura între tehnologiile mobile și web. Pasiunea mea constă în scrierea de cod curat, ușor de întreținut și în crearea de aplicații cu care utilizatorii adoră să interacționeze.`,
-        additionalDescription: "Mă specializez în React Native pentru dezvoltare mobilă multi-platformă, JavaScript modern și TypeScript pentru aplicații robuste, React.js pentru interfețe web dinamice și Node.js pentru servicii backend scalabile. Mă angajez să rămân la curent cu tehnologiile emergente și cele mai bune practici din industrie.",
+        title: "Călătoria mea în Software Engineering",
+        description: `Cu peste ${info.personal.stats.yearOfExperience} ani de experiență, mi-am început călătoria prin stăpânirea fundamentelor programării și ingineriei software. Motivat de curiozitatea despre cum funcționează lucrurile și de ce funcționează așa cum funcționează, am explorat diverse limbaje de programare și framework-uri. De-a lungul timpului, am crescut de la un începător curios la un profesionist experimentat, dezvoltând aplicații care răspund nevoilor lumii reale și oferă o valoare semnificativă utilizatorilor. Pasiunea mea constă în scrierea de cod curat, ușor de întreținut și construirea de aplicații intuitive și captivante pe care oamenii adoră să le folosească.`,
+        additionalDescription: "Încerc să rămân versatil și să nu mă limitez la unul sau două limbaje de programare. Limbajele de programare sunt instrumente și, ca bun inginer software, cred în alegerea instrumentelor potrivite pentru fiecare sarcină. Deși multe lucruri pot fi construite folosind orice limbaj, alegerile pe care le facem astăzi ar trebui să servească drept un avantaj în viitor, nu ca o limitare. Instrumentele de care mă bucur cel mai mult și cu care am o vastă experiență sunt JavaScript, Java și Python. JavaScript domină webul (și chiar pe mobil), Java rulează pe miliarde de dispozitive din întreaga lume, iar Python este pur și simplu distractiv și puternic pentru dezvoltare și experimentare rapidă. Mă angajez să rămân la curent cu tehnologiile emergente și cele mai bune practici din industrie, învățând și îmbunătățindu-mă continuu în fiecare zi.",
       },
       expertise: {
         frontend: {
           title: "Dezvoltare Frontend",
-          description: "React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3",
+          description: "React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3, WordPress",
         },
         mobile: {
           title: "Dezvoltare Mobilă",
-          description: "React Native, iOS & Android, Soluții Cross-platform",
+          description: "React Native, iOS & Android, Cross-platform Solutions",
         },
         backend: {
           title: "Dezvoltare Backend",
-          description: "Node.js, Express.js, API-uri RESTful, Design Baze de Date",
+          description: "Node.js, Express.js, Spring Boot, RESTful APIs, Database Design",
         },
         fullstack: {
           title: "Soluții Full-Stack",
-          description: "Dezvoltare end-to-end, DevOps, Integrare Cloud",
+          description: "End-to-end development, DevOps, Cloud Integration",
+        },
+        cloud: {
+          title: "Soluții Cloud",
+          description: "AWS, Azure, Google Cloud",
         },
       },
       highlights: {
@@ -506,11 +667,15 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
         tools: {
           title: "Instrumente & Framework-uri",
-          description: "React Native, Next.js, Node.js, Express.js, PostgreSQL",
+          description: "React.js, Next.js, Node.js, Express.js, React Native, Spring Boot, AWS, Docker, GitHub Actions, MongoDB",
         },
         satisfaction: {
           title: "Satisfacția Clienților",
           description: "Rată de succes 100% cu livrare la timp",
+        },
+        improvement: {
+          title: "Îmbunătățire Continuă",
+          description: "Întotdeauna în căutarea excelenței și inovației",
         },
       },
     },
@@ -521,6 +686,9 @@ export const vocabulary: Record<Language, Vocabulary> = {
     techStack: {
       title: "Competențe & Tehnologii",
       subtitle: "Instrumente și framework-uri moderne pe care le folosesc pentru a construi aplicații excepționale",
+      mainTitle: "Competențe",
+      technologiesTitle: "Tehnologii",
+      experienceDescription: "Tehnologii și framework-uri pe care le folosesc pentru a construi aplicații excepționale",
     },
     experience: {
       title: "Experiență",
@@ -533,6 +701,46 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "Educație",
       subtitle: "Pregătirea mea academică și calificările în informatică și inginerie software.",
       subjects: "Materii Cheie",
+      licenseDegree: {
+        year: "2014 - 2018",
+        title: "Diplomă de Licență",
+        institution: "Universitatea Tehnică a Moldovei",
+        location: "Chișinău, Moldova",
+        smallDescription: "Finalizarea studiilor superioare secundare cu accent pe Matematică, Fizică și Informatică.",
+        achievementsTitle: "Realizări",
+        achievements: [
+          "Studierea tehnologiilor de comunicații utilizând metode de transmisie radio și optică.",
+          "Dezvoltarea de proiecte bazate pe simulare care implică sisteme radio și optice.",
+          "Proiectarea și implementarea de proiecte de telecomunicații axate pe aplicații practice."
+        ],
+        subjectsTitle: "Materii",
+        subjects: [
+          "Matematică",
+          "Fizică",
+          "Chimie",
+          "Informatică"
+        ],
+      },
+      masterDegree: {
+        year: "2018 - 2020",
+        title: "Diplomă de Master",
+        institution: "Universitatea „Ștefan cel Mare” Suceava",
+        location: "Suceava, România",
+        smallDescription: "Studierea tehnologiilor rețelelor de telecomunicații și lucrul la un proiect VLC pentru diploma de master. Cercetarea testării de penetrare a rețelelor și a vulnerabilităților rețelelor.",
+        achievementsTitle: "Realizări",
+        achievements: [
+          "Urmarea unui program de master în Tehnologii ale Rețelelor de Telecomunicații.",
+          "Dezvoltarea unui proiect bazat pe VLC axat pe sistemele de comunicații în rețea.",
+          "Cercetarea testării de penetrare a rețelelor și analizarea vulnerabilităților de securitate."
+        ],
+        subjectsTitle: "Materii",
+        subjects: [
+          "Structuri de Date",
+          "Algoritmi",
+          "Dezvoltare Mobilă",
+          "Tehnologii Web"
+        ],
+      },
     },
     certifications: {
       title: "Certificări & Premii",
@@ -540,6 +748,39 @@ export const vocabulary: Record<Language, Vocabulary> = {
       details: "Detalii",
       professionalCertifications: "Certificări Profesionale",
       awardsRecognition: "Premii & Recunoșteri",
+      certificationsArray: [
+        {
+          year: "2024",
+          title: "AWS Certified Cloud Practitioner",
+          issuer: "Amazon Web Services",
+          description: "Certificare profesională care demonstrează expertiza în proiectarea sistemelor distribuite pe platforma AWS.",
+          credential: "AWS-SA-2024-5dbf9046",
+        },
+        {
+          year: "2022",
+          title: "Certified Associate Configurator",
+          issuer: "Unqork",
+          description:
+            "Certificare Unqork în dezvoltarea pe platforma Unqork, acoperind optimizarea performanței și cele mai bune practici folosind această platformă.",
+          credential: "UNQORK-RN-2022-ef6f4d8e",
+        },
+        {
+          year: "2020",
+          title: "C",
+          issuer: "SoloLearn",
+          description:
+            "Certificare SoloLearn în programarea în C, acoperind fundamentele limbajului și cele mai bune practici.",
+          credential: "SOLO-RN-2020-ef6f4d8e",
+        },
+        {
+          year: "2022",
+          title: "C++",
+          issuer: "SoloLearn",
+          description:
+            "Certificare SoloLearn în programarea în C++, acoperind fundamentele limbajului și cele mai bune practici.",
+          credential: "SOLO-RN-2020-ef6f4d8e",
+        },
+      ],
     },
     projects: {
       title: "Proiecte Prezentate",
@@ -547,6 +788,14 @@ export const vocabulary: Record<Language, Vocabulary> = {
       viewProject: "Vezi Proiectul",
       inDevelopment: "În Dezvoltare",
     },
+    awards: [
+      {
+        year: "2022",
+        title: "Expleo CUE Award",
+        issuer: "Associated with Expleo Group",
+        description: "Premiul Unic CUE 2022 @ Expleo Group",
+      },
+    ],
     contact: {
       title: "Intră în Legătură",
       subtitle:
@@ -717,8 +966,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
         `Я увлеченный full-stack разработчик с более чем ${info.personal.stats.yearOfExperience} летним опытом создания исключительных цифровых решений. Мой опыт охватывает мобильную и веб-разработку с акцентом на создание масштабируемых, удобных приложений, которые способствуют росту бизнеса и обеспечивают выдающийся пользовательский опыт.`,
       journey: {
         title: "Мой Путь в Разработке",
-        description: `За более чем ${info.personal.stats.yearOfExperience} лет в области разработки я прошел путь от любопытного новичка до опытного профессионала, который объединяет мобильные и веб-технологии. Моя страсть заключается в написании чистого, поддерживаемого кода и создании приложений, с которыми пользователи любят взаимодействовать.`,
-        additionalDescription: "Я специализируюсь на React Native для кроссплатформенной мобильной разработки, современном JavaScript и TypeScript для надежных приложений, React.js для динамических веб- интерфейсов и Node.js для масштабируемых бэкенд- сервисов.Я стремлюсь быть в курсе новых технологий и передовых отраслевых практик.",
+        description: `Имея более чем ${info.personal.stats.yearOfExperience}-летний опыт, я начал свой путь с освоения основ программирования и разработки программного обеспечения. Движимый любопытством к тому, как всё работает и почему это работает именно так, я изучал различные языки программирования и фреймворки. Со временем я вырос из любопытного новичка в опытного профессионала, разрабатывающего приложения, отвечающие реальным потребностям и представляющие значительную ценность для пользователей. Моя страсть — писать чистый, легко поддерживаемый код и создавать интуитивно понятные и увлекательные приложения, которые нравятся людям.`,
+        additionalDescription: "Я стараюсь быть универсальным и не ограничиваться одним-двумя языками программирования. Языки программирования — это инструменты, и как хороший инженер-программист, я верю в необходимость выбора правильных инструментов для каждой задачи. Хотя многое можно создать на любом языке, наш сегодняшний выбор должен стать преимуществом в будущем, а не ограничением. Больше всего мне нравятся JavaScript, Java и Python, с которыми я имею богатый опыт. JavaScript доминирует в вебе (и даже на мобильных устройствах), Java работает на миллиардах устройств по всему миру, а Python — это просто увлекательный и мощный инструмент для быстрой разработки и экспериментов. Я стремлюсь быть в курсе новейших технологий и передовых отраслевых практик, постоянно обучаясь и совершенствуясь каждый день.",
       },
       expertise: {
         frontend: {
@@ -737,6 +986,10 @@ export const vocabulary: Record<Language, Vocabulary> = {
           title: "Full-Stack Решения",
           description: "Комплексная разработка, DevOps, Облачная Интеграция",
         },
+        cloud: {
+          title: "Облачные Решения",
+          description: "AWS, Azure, Google Cloud, Облачная Разработка",
+        }
       },
       highlights: {
         excellence: {
@@ -745,11 +998,15 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
         tools: {
           title: "Инструменты",
-          description: "React Native, JavaScript, TypeScript, Node.js, Express.js, MongoDB",
+          description: "React.js, Next.js, Node.js, Express.js, React Native, Spring Boot, AWS, Docker, GitHub Actions, MongoDB",
         },
         satisfaction: {
           title: "Удовлетворенность Клиентов",
           description: "100% успешность проектов с своевременной доставкой",
+        },
+        improvement: {
+          title: "Постоянное Совершенствование",
+          description: "Всегда стремлюсь к совершенству и инновациям",
         },
       },
     },
@@ -760,6 +1017,9 @@ export const vocabulary: Record<Language, Vocabulary> = {
     techStack: {
       title: "Навыки и Технологии",
       subtitle: "Современные инструменты и фреймворки, которые я использую для создания исключительных приложений",
+      mainTitle: "Навыки",
+      technologiesTitle: "Технологии",
+      experienceDescription: "Технологии и фреймворки, которые я использую для создания исключительных приложений",
     },
     experience: {
       title: "Опыт",
@@ -772,6 +1032,46 @@ export const vocabulary: Record<Language, Vocabulary> = {
       title: "Образование",
       subtitle: "Моя академическая подготовка и квалификация в области информатики и программной инженерии.",
       subjects: "Ключевые Предметы",
+      licenseDegree: {
+        year: "2014 - 2018",
+        title: "Степень Лицензии",
+        institution: "Технический Университет Молдовы",
+        location: "Кишинёв, Молдова",
+        smallDescription: "Завершил высшее среднее образование с акцентом на математику, физику и информатику.",
+        achievementsTitle: "Достижения",
+        achievements: [
+          "Изучение технологий связи с использованием радиоволн и оптических методов передачи.",
+          "Разработка проектов на основе моделирования, включающих радиосистемы и оптические системы.",
+          "Проектирование и реализация телекоммуникационных проектов, ориентированных на практические приложения."
+        ],
+        subjectsTitle: "Предметы",
+        subjects: [
+          "Математика",
+          "Физика",
+          "Химия",
+          "Информатика"
+        ],
+      },
+      masterDegree: {
+        year: "2018 - 2020",
+        title: "Степень Магистра",
+        institution: "Университет „Штефан чел Маре” Сучава",
+        location: "Сучава, Румыния",
+        smallDescription: "Изучение технологий телекоммуникационных сетей и работа над проектом VLC для получения степени магистра. Исследование тестирования на проникновение в сети и уязвимостей сетей.",
+        achievementsTitle: "Достижения",
+        achievements: [
+          "Получение степени магистра в области технологий телекоммуникационных сетей.",
+          "Разработка проекта на основе VLC, ориентированного на системы сетевой связи.",
+          "Исследование тестирования на проникновение в сети и анализ уязвимостей безопасности."
+        ],
+        subjectsTitle: "Предметы",
+        subjects: [
+          "Структуры Данных",
+          "Алгоритмы",
+          "Мобильная Разработка",
+          "Веб-Технологии"
+        ],
+      },
     },
     certifications: {
       title: "Сертификаты и Награды",
@@ -780,6 +1080,39 @@ export const vocabulary: Record<Language, Vocabulary> = {
       details: "Детали",
       professionalCertifications: "Профессиональные Сертификаты",
       awardsRecognition: "Награды и Распознавание",
+      certificationsArray: [
+        {
+          year: "2024",
+          title: "AWS Certified Cloud Practitioner",
+          issuer: "Amazon Web Services",
+          description: "Профессиональный сертификат, подтверждающий экспертизу в проектировании распределенных систем на платформе AWS.",
+          credential: "AWS-SA-2024-5dbf9046",
+        },
+        {
+          year: "2022",
+          title: "Certified Associate Configurator",
+          issuer: "Unqork",
+          description:
+            "Сертификат Unqork по разработке на платформе Unqork, охватывающий оптимизацию производительности и лучшие практики использования этой платформы.",
+          credential: "UNQORK-RN-2022-ef6f4d8e",
+        },
+        {
+          year: "2020",
+          title: "C",
+          issuer: "SoloLearn",
+          description:
+            "Сертификат SoloLearn по программированию на C, охватывающий основы языка и лучшие практики.",
+          credential: "SOLO-RN-2020-ef6f4d8e",
+        },
+        {
+          year: "2022",
+          title: "C++",
+          issuer: "SoloLearn",
+          description:
+            "Сертификат SoloLearn по программированию на C++, охватывающий основы языка и лучшие практики.",
+          credential: "SOLO-RN-2020-ef6f4d8e",
+        },
+      ],
     },
     projects: {
       title: "Избранные Проекты",
@@ -787,6 +1120,14 @@ export const vocabulary: Record<Language, Vocabulary> = {
       viewProject: "Посмотреть Проект",
       inDevelopment: "В Разработке",
     },
+    awards: [
+      {
+        year: "2022",
+        title: "Expleo CUE Award",
+        issuer: "Партнер с Expleo Group",
+        description: "Уникальная награда CUE 2022 @ Expleo Group",
+      },
+    ],
     contact: {
       title: "Свяжитесь со Мной",
       subtitle:

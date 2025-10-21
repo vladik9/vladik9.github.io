@@ -3,16 +3,54 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Award, Calendar } from "lucide-react";
+import { Award, Calendar, BookCheck } from "lucide-react";
 import { useLanguage } from "./language-provider";
 import { info } from "@/lib/info";
 
-const certifications = info.certifications;
 const awards = info.awards;
 export function Certifications() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { t } = useLanguage();
+
+  const certifications = [
+    {
+      year: t.certifications.certificationsArray[0].year,
+      title: t.certifications.certificationsArray[0].title,
+      issuer: t.certifications.certificationsArray[0].issuer,
+      description: t.certifications.certificationsArray[0].description,
+      credential: t.certifications.certificationsArray[0].credential,
+    },
+    {
+      year: t.certifications.certificationsArray[1].year,
+      title: t.certifications.certificationsArray[1].title,
+      issuer: t.certifications.certificationsArray[1].issuer,
+      description: t.certifications.certificationsArray[1].description,
+      credential: t.certifications.certificationsArray[1].credential,
+    },
+    {
+      year: t.certifications.certificationsArray[2].year,
+      title: t.certifications.certificationsArray[2].title,
+      issuer: t.certifications.certificationsArray[2].issuer,
+      description: t.certifications.certificationsArray[2].description,
+      credential: t.certifications.certificationsArray[2].credential,
+    },
+    {
+      year: t.certifications.certificationsArray[3].year,
+      title: t.certifications.certificationsArray[3].title,
+      issuer: t.certifications.certificationsArray[3].issuer,
+      description: t.certifications.certificationsArray[3].description,
+      credential: t.certifications.certificationsArray[3].credential,
+    },
+  ];
+  const awards = [
+    {
+      year: t.awards[0].year,
+      title: t.awards[0].title,
+      issuer: t.awards[0].issuer,
+      description: t.awards[0].description,
+    },
+  ];
 
   return (
     <section id="certifications" ref={ref} className="py-20 px-4">
@@ -35,7 +73,7 @@ export function Certifications() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-2xl font-bold mb-8 flex items-center gap-2"
           >
-            <Award className="h-6 w-6 text-primary" />
+            <BookCheck className="h-6 w-6 text-primary" />
             {t.certifications.professionalCertifications}
           </motion.h3>
 

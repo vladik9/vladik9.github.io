@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Smartphone, Server, Layers } from "lucide-react";
+import { Code2, Smartphone, Server, Layers, Cloud } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import { highLightText } from "@/lib/utils";
 import { info } from "@/lib/info";
@@ -20,19 +20,25 @@ export function About() {
       description: t.about.expertise.frontend.description,
     },
     {
-      icon: Smartphone,
-      title: t.about.expertise.mobile.title,
-      description: t.about.expertise.mobile.description,
-    },
-    {
       icon: Server,
       title: t.about.expertise.backend.title,
       description: t.about.expertise.backend.description,
     },
     {
+      icon: Smartphone,
+      title: t.about.expertise.mobile.title,
+      description: t.about.expertise.mobile.description,
+    },
+
+    {
       icon: Layers,
       title: t.about.expertise.fullstack.title,
       description: t.about.expertise.fullstack.description,
+    },
+    {
+      icon: Cloud,
+      title: t.about.expertise.cloud.title,
+      description: t.about.expertise.cloud.description,
     },
   ];
 
@@ -49,7 +55,7 @@ export function About() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">{t.about.description}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -99,6 +105,10 @@ export function About() {
             <div className="bg-card border border-border rounded-xl p-6 glow-card">
               <h4 className="text-xl font-semibold mb-2 text-secondary">{t.about.highlights.satisfaction.title}</h4>
               <p className="text-sm text-muted-foreground">{t.about.highlights.satisfaction.description}</p>
+            </div>
+            <div className="bg-card border border-border rounded-xl p-6 glow-card">
+              <h4 className="text-xl font-semibold mb-2 text-secondary">{t.about.highlights.improvement.title}</h4>
+              <p className="text-sm text-muted-foreground">{t.about.highlights.improvement.description}</p>
             </div>
           </motion.div>
         </div>

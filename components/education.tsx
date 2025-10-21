@@ -7,12 +7,42 @@ import { GraduationCap, Calendar } from "lucide-react";
 import { useLanguage } from "./language-provider";
 import { info } from "@/lib/info";
 
-const education = info.education;
+
 
 export function Education() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { t } = useLanguage();
+
+  const education = [
+    {
+      period: t.education.masterDegree.year,
+      degree: t.education.masterDegree.title,
+      institution: t.education.masterDegree.institution,
+      location: t.education.masterDegree.location,
+      description: t.education.masterDegree.smallDescription,
+      achievements: [
+        t.education.masterDegree.achievements[0],
+        t.education.masterDegree.achievements[1],
+        t.education.masterDegree.achievements[2],
+      ],
+      subjects: [t.education.masterDegree.subjects[0], t.education.masterDegree.subjects[1], t.education.masterDegree.subjects[2], t.education.masterDegree.subjects[3]],
+    },
+    {
+      period: t.education.licenseDegree.year,
+      degree: t.education.licenseDegree.title,
+      institution: t.education.licenseDegree.institution,
+      location: t.education.licenseDegree.location,
+      description: t.education.licenseDegree.smallDescription,
+      achievements: [
+        t.education.licenseDegree.achievements[0],
+        t.education.licenseDegree.achievements[1],
+        t.education.licenseDegree.achievements[2],
+      ],
+      subjects: [t.education.licenseDegree.subjects[0], t.education.licenseDegree.subjects[1], t.education.licenseDegree.subjects[2], t.education.licenseDegree.subjects[3]],
+    },
+  ];
+
 
   return (
     <section id="education" ref={ref} className="py-20 px-4 bg-card/30">
