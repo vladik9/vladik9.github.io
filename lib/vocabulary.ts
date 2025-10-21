@@ -65,6 +65,8 @@ export interface Vocabulary {
     experienceDescription: string;
     title: string;
     subtitle: string;
+    showLess: string;
+    showMore: string;
   };
   // Experience Section
   experience: {
@@ -392,6 +394,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       mainTitle: "Skills",
       technologiesTitle: "Technologies",
       experienceDescription: "Technologies and frameworks I use to build exceptional applications",
+      showLess: "Show Less",
+      showMore: "Show More",
     },
     experience: {
       title: "Experience",
@@ -792,6 +796,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       mainTitle: "Competențe",
       technologiesTitle: "Tehnologii",
       experienceDescription: "Tehnologii și framework-uri pe care le folosesc pentru a construi aplicații excepționale",
+      showLess: "Arată mai puțin",
+      showMore: "Arată mai mult",
     },
     experience: {
       title: "Experiență",
@@ -1191,6 +1197,8 @@ export const vocabulary: Record<Language, Vocabulary> = {
       mainTitle: "Навыки",
       technologiesTitle: "Технологии",
       experienceDescription: "Технологии и фреймворки, которые я использую для создания исключительных приложений",
+      showLess: "Показать меньше",
+      showMore: "Показать больше",
     },
     experience: {
       title: "Опыт",

@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "./language-provider";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const technologies = [
   { name: "C", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/c-colored.svg", color: "#61DAFB" },
@@ -57,9 +58,9 @@ const technologies = [
   { name: "Shadcn UI", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/shadcnui.svg", color: "#2496ED" },
   { name: "Digital Ocean", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/digitalocean-colored.svg", color: "#2496ED" },
   { name: "Oracle", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/oracle-colored.svg", color: "#2496ED" },
-  { name: "A. Photoshop", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/photoshop-colored.svg", color: "#2496ED" },
-  { name: "A. Illustrator", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/illustrator-colored.svg", color: "#2496ED" },
-  { name: "A. After Effects", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aftereffects.svg", color: "#2496ED" },
+  { name: "Photoshop", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/photoshop-colored.svg", color: "#2496ED" },
+  { name: "Illustrator", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/illustrator-colored.svg", color: "#2496ED" },
+  { name: "After Effects", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aftereffects.svg", color: "#2496ED" },
   { name: "Figma", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/figma-colored.svg", color: "#2496ED" },
   { name: "Laravel", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/laravel-colored.svg", color: "#2496ED" },
   { name: "VsCode", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/visualstudiocode-colored.svg", color: "#2496ED" },
@@ -72,6 +73,24 @@ export function TechStack() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // On mobile (3 cols): show 3 rows = 9 items
+  // On desktop (8 cols): show 2 rows = 16 items
+  const initialVisibleCount = isMobile ? 9 : 16;
+  const visibleCount = showAll ? technologies.length : initialVisibleCount;
+  const displayedTechnologies = technologies.slice(0, visibleCount);
 
   return (
     <section id="tech-stack" ref={ref} className="py-30 px-4">
@@ -91,7 +110,7 @@ export function TechStack() {
         </motion.div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
-          {technologies.map((tech, index) => (
+          {displayedTechnologies.map((tech, index) => (
             <motion.div
               key={tech.name}
               initial={{ opacity: 0, scale: 0.5 }}
@@ -126,6 +145,30 @@ export function TechStack() {
             </motion.div>
           ))}
         </div>
+
+        {/* Show More/Less Button */}
+        {technologies.length > initialVisibleCount && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex justify-center mt-12"
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-xl hover:bg-accent transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span className="font-medium">
+                {showAll ? t.techStack.showLess || "Show Less" : t.techStack.showMore || "Show More"}
+              </span>
+              {showAll ? (
+                <ChevronUp className="h-5 w-5" />
+              ) : (
+                <ChevronDown className="h-5 w-5" />
+              )}
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
