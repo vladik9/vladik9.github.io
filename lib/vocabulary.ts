@@ -227,6 +227,34 @@ export interface Vocabulary {
       specialRequests: string,
       terms: string,
       marketing: string;
+      selectType: string;
+      selectBudget: string;
+      whenToStart: string;
+      emailPlaceholder: string;
+      descriptionPlaceholder: string;
+      specialRequestsPlaceholder: string;
+    };
+    projectTypes: {
+      mobile: string;
+      web: string;
+      fullstack: string;
+      consulting: string;
+    };
+    budgetRanges: {
+      under5k: string;
+      range5to10k: string;
+      range10to25k: string;
+      range25to50k: string;
+      over50k: string;
+      notSure: string;
+    };
+    timelines: {
+      asap: string;
+      withinMonth: string;
+      oneToThree: string;
+      threeToSix: string;
+      sixPlus: string;
+      flexible: string;
     };
     services: {
       mobileNative: string;
@@ -613,6 +641,34 @@ export const vocabulary: Record<Language, Vocabulary> = {
         specialRequests: "Special Requests",
         terms: "I agree to the terms and conditions",
         marketing: "I want to receive marketing emails",
+        selectType: "Select type",
+        selectBudget: "Select budget",
+        whenToStart: "When to start?",
+        emailPlaceholder: "email@example.com",
+        descriptionPlaceholder: "Describe your project, goals, and any specific requirements...",
+        specialRequestsPlaceholder: "Any specific technologies, integrations, or preferences...",
+      },
+      projectTypes: {
+        mobile: "Mobile App",
+        web: "Web Application",
+        fullstack: "Full-Stack Project",
+        consulting: "Consulting",
+      },
+      budgetRanges: {
+        under5k: "Under $5,000",
+        range5to10k: "$5,000 - $10,000",
+        range10to25k: "$10,000 - $25,000",
+        range25to50k: "$25,000 - $50,000",
+        over50k: "$50,000+",
+        notSure: "Not sure yet",
+      },
+      timelines: {
+        asap: "ASAP",
+        withinMonth: "Within 1 month",
+        oneToThree: "1-3 months",
+        threeToSix: "3-6 months",
+        sixPlus: "6+ months",
+        flexible: "Flexible",
       },
       services: {
         mobileNative: "Native Mobile App (iOS/Android, React Native, Flutter)",
@@ -1013,6 +1069,34 @@ export const vocabulary: Record<Language, Vocabulary> = {
         specialRequests: "Solicitații Speciale",
         terms: "Acceptez Termenii de Utilizare",
         marketing: "Acceptez Politica de Marketing",
+        selectType: "Selectează tipul",
+        selectBudget: "Selectează bugetul",
+        whenToStart: "Când să începem?",
+        emailPlaceholder: "email@exemplu.com",
+        descriptionPlaceholder: "Descrie proiectul, obiectivele și orice cerințe specifice...",
+        specialRequestsPlaceholder: "Orice tehnologii, integrări sau preferințe specifice...",
+      },
+      projectTypes: {
+        mobile: "Aplicație Mobilă",
+        web: "Aplicație Web",
+        fullstack: "Proiect Full-Stack",
+        consulting: "Consultanță",
+      },
+      budgetRanges: {
+        under5k: "Sub $5,000",
+        range5to10k: "$5,000 - $10,000",
+        range10to25k: "$10,000 - $25,000",
+        range25to50k: "$25,000 - $50,000",
+        over50k: "Peste $50,000",
+        notSure: "Nu sunt sigur încă",
+      },
+      timelines: {
+        asap: "Cât mai curând",
+        withinMonth: "În maxim 1 lună",
+        oneToThree: "1-3 luni",
+        threeToSix: "3-6 luni",
+        sixPlus: "Peste 6 luni",
+        flexible: "Flexibil",
       },
       services: {
         mobileNative: "Aplicație Mobilă Nativă (iOS/Android, React Native, Flutter)",
@@ -1413,6 +1497,34 @@ export const vocabulary: Record<Language, Vocabulary> = {
         specialRequests: "Специальные Запросы",
         terms: "Я принимаю условия политики конфиденциальности",
         marketing: "Согласие на рассылку",
+        selectType: "Выберите тип",
+        selectBudget: "Выберите бюджет",
+        whenToStart: "Когда начать?",
+        emailPlaceholder: "email@primer.com",
+        descriptionPlaceholder: "Опишите ваш проект, цели и любые особые требования...",
+        specialRequestsPlaceholder: "Любые специфические технологии, интеграции или предпочтения...",
+      },
+      projectTypes: {
+        mobile: "Мобильное Приложение",
+        web: "Веб-Приложение",
+        fullstack: "Full-Stack Проект",
+        consulting: "Консалтинг",
+      },
+      budgetRanges: {
+        under5k: "Менее $5,000",
+        range5to10k: "$5,000 - $10,000",
+        range10to25k: "$10,000 - $25,000",
+        range25to50k: "$25,000 - $50,000",
+        over50k: "Более $50,000",
+        notSure: "Пока не уверен",
+      },
+      timelines: {
+        asap: "Как можно скорее",
+        withinMonth: "В течение 1 месяца",
+        oneToThree: "1-3 месяца",
+        threeToSix: "3-6 месяцев",
+        sixPlus: "Более 6 месяцев",
+        flexible: "Гибко",
       },
       services: {
         mobileNative: "Нативное Мобильное Приложение (iOS/Android, React Native, Flutter)",

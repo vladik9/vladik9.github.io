@@ -13,18 +13,26 @@ import { ConfirmationModal } from "./confirmation-modal";
 import { info } from "@/lib/info";
 import CalendlyButton from "./CalendlyButton";
 
-const budgetRanges = [
-  "Under $5,000",
-  "$5,000 - $10,000",
-  "$10,000 - $25,000",
-  "$25,000 - $50,000",
-  "$50,000+",
-  "Not sure yet",
-];
-const timelines = ["ASAP", "Within 1 month", "1-3 months", "3-6 months", "6+ months", "Flexible"];
-
 export function RequestQuote() {
   const { t } = useLanguage();
+
+  const budgetRanges = [
+    t.quote.budgetRanges.under5k,
+    t.quote.budgetRanges.range5to10k,
+    t.quote.budgetRanges.range10to25k,
+    t.quote.budgetRanges.range25to50k,
+    t.quote.budgetRanges.over50k,
+    t.quote.budgetRanges.notSure,
+  ];
+
+  const timelines = [
+    t.quote.timelines.asap,
+    t.quote.timelines.withinMonth,
+    t.quote.timelines.oneToThree,
+    t.quote.timelines.threeToSix,
+    t.quote.timelines.sixPlus,
+    t.quote.timelines.flexible,
+  ];
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [formData, setFormData] = useState({
     name: "",
@@ -117,7 +125,7 @@ export function RequestQuote() {
                     </label>
                     <Input
                       type="email"
-                      placeholder="email@example.com"
+                      placeholder={t.quote.form.emailPlaceholder}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -158,11 +166,11 @@ export function RequestQuote() {
                       onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                       required
                     >
-                      <option value="">Select type</option>
-                      <option value="mobile">Mobile App</option>
-                      <option value="web">Web Application</option>
-                      <option value="fullstack">Full-Stack Project</option>
-                      <option value="consulting">Consulting</option>
+                      <option value="">{t.quote.form.selectType}</option>
+                      <option value="mobile">{t.quote.projectTypes.mobile}</option>
+                      <option value="web">{t.quote.projectTypes.web}</option>
+                      <option value="fullstack">{t.quote.projectTypes.fullstack}</option>
+                      <option value="consulting">{t.quote.projectTypes.consulting}</option>
                     </select>
                   </div>
                   <div>
@@ -175,7 +183,7 @@ export function RequestQuote() {
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                       required
                     >
-                      <option value="">Select budget</option>
+                      <option value="">{t.quote.form.selectBudget}</option>
                       {budgetRanges.map((range) => (
                         <option key={range} value={range}>
                           {range}
@@ -193,7 +201,7 @@ export function RequestQuote() {
                       onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
                       required
                     >
-                      <option value="">When to start?</option>
+                      <option value="">{t.quote.form.whenToStart}</option>
                       {timelines.map((time) => (
                         <option key={time} value={time}>
                           {time}
@@ -228,7 +236,7 @@ export function RequestQuote() {
                     {t.quote.form.description} <span className="text-destructive">*</span>
                   </label>
                   <Textarea
-                    placeholder="Describe your project, goals, and any specific requirements..."
+                    placeholder={t.quote.form.descriptionPlaceholder}
                     rows={5}
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
@@ -242,7 +250,7 @@ export function RequestQuote() {
                 <div>
                   <label className="block text-sm font-medium mb-2">{t.quote.form.specialRequests}</label>
                   <Textarea
-                    placeholder="Any specific technologies, integrations, or preferences..."
+                    placeholder={t.quote.form.specialRequestsPlaceholder}
                     rows={3}
                     value={formData.specialRequests}
                     onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
