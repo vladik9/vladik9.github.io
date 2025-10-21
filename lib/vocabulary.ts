@@ -146,6 +146,35 @@ export interface Vocabulary {
       issuer: string;
       description: string;
     }];
+  experiences: [
+    {
+      period: string;
+      title: string;
+      company: string;
+      location: string;
+      description: string;
+      achievements: string[];
+      technologies: string[];
+    },
+    {
+      period: string;
+      title: string;
+      company: string;
+      location: string;
+      description: string;
+      achievements: string[];
+      technologies: string[];
+    },
+    {
+      period: string;
+      title: string;
+      company: string;
+      location: string;
+      description: string;
+      achievements: string[];
+      technologies: string[];
+    }
+  ];
   // Projects Section
   projects: {
     title: string;
@@ -452,6 +481,70 @@ export const vocabulary: Record<Language, Vocabulary> = {
 
       ],
     },
+    experiences: [
+      {
+        period: "Jan 2022 - Present",
+        title: "Software Engineer",
+        company: "Custom Code Factory",
+        location: "Suceava, Romania",
+        description:
+          "In Custom Code Factory we develop cutting-edge solutions for client needs.",
+        achievements: [
+          "Developed AI-powered tools to extract data from documents and implement Retrieval-Augmented Generation (RAG) chat systems, enabling automated knowledge base improvement and optimized marketing insights with Python and FastAPI.",
+          "Build customers' WooCommerce website, manage easy product loading, stock management, build plugins using PHP, and tools for handling heavy operations that clients have.",
+          "Developed CRM solutions in React and Nest for targeting specific branches of clients, helping clients find new clients, and approaching or retaining them.",
+          "ERP solutions for enterprise resource planning and process automation in Next.",
+          "Enhance the security of sensitive data by applying multiple algorithms and encryption at rest on devices and hard disks with proper backups of clients' data on remote servers with a quick restore solution in case of fault tolerance.",
+          "Lead migration to distributed services and containerization of applications using Docker and pipelines.",
+          "Build cross-platform applications using React Native that could be deployed easily on mobile stores.",
+          "Configured and deployed application in production using Apache2, Nginx, and GitHub Actions.",
+          "Developed 2-factor authentication mechanisms that can enhance security with security code generation and 2-step verification using PHP and React Native.",
+          "Created automated scripts in Bash for backup creation, transfer, and encryption, scheduled actions, and cleanup solutions of old backups."
+        ],
+        technologies: ["Python", "FastAPI", "PHP", "React", "Next", "Nest", "Docker", "TypeScript", "Node.js", "AWS"],
+      },
+      {
+        period: "Feb 2022 - May 2024",
+        title: "Senior Application Developer",
+        company: "Marsh McLennan/Expleo Group",
+        location: "Dublin, Ireland/Iaşi, Romania (remote-contract)",
+        description:
+          "In Marsh McLennan/Expleo Group we build client solutions for their business.",
+        achievements:
+          [
+            "Developed and implemented highly optimized cloud services, significantly enhancing performance and maintainability to meet the demanding application needs of API processing effectively.",
+            "Optimized the codebase by reducing its complexity and separating concepts, thereby improving code execution efficiency. This involved breaking down complex code into smaller, more manageable pieces, making the logic easier to follow and debug.",
+            "Increased application flexibility and scalability by adhering to open-closed principles in JavaScript, ensuring the system is closed to changes but open to adding new features without causing disruptions.",
+            "Improved code readability by consolidating core logic and developing testing modules, enabling developers to debug and enhance service and API testing more smoothly and efficiently.",
+            "Implemented and maintained an error handling mechanism that tracks problematic code and incorporates recovery processes to address major issues effectively.",
+            "Build cloud tools and solutions for internal use and testing, using Unqork and JavaScript to automate business processes and platform APIs."
+          ],
+        technologies: ["Unqork", "JavaScript", "CSS3", "HTML5", "API", "Cloud Services"],
+      },
+      {
+        period: "Aug 2021 - Sep 2021",
+        title: "QA Developer",
+        company: "ASSIST Software.",
+        location: "Suceava, Romania",
+        description:
+          "QA development and testing for cross-platform mobile applications. Collaborated with cross-functional teams to deliver high-quality user experiences.",
+        achievements: [
+          "Created detailed test plans and cases for web and mobile apps.",
+          "Covered all key areas: functionality, usability, performance, and security.",
+          "Applied structured testing for complete coverage.",
+          "Documentation:",
+          "Wrote clear test cases with steps, expected results, and pass/fail criteria.",
+          "Quality Review:",
+          "Reviewed quality specs and design docs for clarity and feasibility.",
+          "Provided feedback to improve alignment with project goals and standards.",
+          "Manual & Automated Testing:",
+          "Built manual and automated tests using Cypress.",
+          "Tested all features across releases to ensure stability.",
+          "Used Cypress to streamline testing and enhance reliability."
+        ],
+        technologies: ["JavaScript", "Cypress", "REST APIs", "Testing documentation"],
+      },
+    ],
     projects: {
       title: "Featured Projects",
       subtitle: "Showcasing my best work in mobile and web development",
@@ -782,6 +875,69 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
       ],
     },
+    experiences: [
+      {
+        period: "Ian 2022 - Prezent",
+        title: "Software Engineer",
+        company: "Custom Code Factory",
+        location: "Suceava, România",
+        description:
+          "La Custom Code Factory dezvoltăm soluții de ultimă generație pentru nevoile clienților.",
+        achievements: [
+          "Dezvoltat instrumente alimentate de AI pentru extragerea datelor din documente și implementarea sistemelor de chat Retrieval-Augmented Generation (RAG), permițând îmbunătățirea automatizată a bazei de cunoștințe și optimizarea perspectivelor de marketing cu Python și FastAPI.",
+          "Construirea site-ului web WooCommerce al clienților, gestionarea încărcării ușoare a produselor, gestionarea stocurilor, construirea de plugin-uri folosind PHP și instrumente pentru gestionarea operațiunilor grele pe care le au clientii.",
+          "Dezvoltarea soluțiilor CRM in React si Nest pentru a ajuta clientii la identificarea clientilor noi, la apropierea sau la retinerea acestora.",
+          "Solutii de ERP pentru planificarea proceselor de lucru in Next.",
+          "Implementarea de solutii de securitate pentru date sensibile aplicand algoritmi si criptare pe dispozitive si discuri hard si solutii de recuperare rapida a datelor in caz de faliment.",
+          "Construirea de solutii de migrare la servicii distribuiti si containerizarea aplicatiilor folosind Docker si pipelines.",
+          "Construirea de aplicatii cross-platform folosind React Native care pot fi depusate cu uscere pe magazinuri mobile.",
+          "Configurarea si depusarea aplicatiilor in productie folosind Apache2, Nginx si GitHub Actions.",
+          "Dezvoltarea de mecanisme de autentificare si autentificare de doua factori care pot fi utilizate pentru a imbunatati securitatea aplicatiilor.",],
+        technologies: ["Python", "FastAPI", "PHP", "React", "Next", "Nest", "Docker", "TypeScript", "Node.js", "AWS"],
+      },
+      {
+        period: "Feb 2022 - Mai 2024",
+        title: "Senior Application Developer",
+        company: "Marsh McLennan/Expleo Group",
+        location: "Dublin, Irlanda/Iaşi, România (remote-contract)",
+        description:
+          "La Marsh McLennan/Expleo Group construim soluții pentru afacerile clienților.",
+        achievements:
+          [
+            "Dezvoltat și implementat servicii cloud extrem de optimizate, îmbunătățind semnificativ performanța și ușurința de întreținere pentru a satisface nevoile exigente ale aplicațiilor de procesare API în mod eficient.",
+            "Optimizat baza de cod prin reducerea complexității acesteia și separarea conceptelor, îmbunătățind astfel eficiența execuției codului. Aceasta a implicat împărțirea codului complex în bucăți mai mici și mai ușor de gestionat, făcând logica mai ușor de urmărit și depanat.",
+            "Crescut flexibilitatea și scalabilitatea aplicațiilor prin aderarea la principiile open-closed în JavaScript, asigurând că sistemul este închis pentru modificări, dar deschis pentru adăugarea de noi funcționalități fără a provoca întreruperi.",
+            "Îmbunătățit lizibilitatea codului prin consolidarea logicii de bază și dezvoltarea modulelor de testare, permițând dezvoltatorilor să depaneze și să îmbunătățească testarea serviciilor și API-urilor mai lin și mai eficient.",
+            "Implementat și întreținut un mecanism de gestionare a erorilor care urmărește codul problematic și încorporează procese de recuperare pentru a aborda eficient problemele majore.",
+            "Construirea de instrumente și soluții cloud pentru uz intern și testare, folosind Unqork și JavaScript pentru a automatiza procesele de afaceri și API-urile platformei."
+          ],
+        technologies: ["Unqork", "JavaScript", "CSS3", "HTML5", "API", "Cloud Services"],
+      },
+      {
+        period: "Aug 2021 - Sep 2021",
+        title: "QA Developer",
+        company: "ASSIST Software.",
+        location: "Suceava, România",
+        description:
+          "Dezvoltare și testare QA pentru aplicații mobile cross-platform. Colaborat cu echipe multifuncționale pentru a livra experiențe de utilizator de înaltă calitate.",
+        achievements: [
+          "Creat planuri și cazuri de testare detaliate pentru aplicații web și mobile.",
+          "Acoperit toate domeniile cheie: funcționalitate, utilizabilitate, performanță și securitate.",
+          "Aplicat testare structurată pentru acoperire completă.",
+          "Documentație:",
+          "Scris cazuri de testare clare cu pași, rezultate așteptate și criterii de trecere/eșec.",
+          "Revizuire Calitate:",
+          "Revizuit specificațiile de calitate și documentele de design pentru claritate și fezabilitate.",
+          "Furnizat feedback pentru a îmbunătăți alinierea cu obiectivele și standardele proiectului.",
+          "Testare Manuală & Automatizată:",
+          "Construirea de teste manuale și automate folosind Cypress.",
+          "Testat toate funcționalitățile pe parcursul lansărilor pentru a asigura stabilitatea.",
+          "Folosirea Cypress pentru a eficientiza testarea și a îmbunătăți fiabilitatea."
+        ],
+        technologies: ["JavaScript", "Cypress", "REST APIs", "Testing documentation"],
+      },
+    ],
+
     projects: {
       title: "Proiecte Prezentate",
       subtitle: "Prezentând cele mai bune lucrări ale mele în dezvoltare mobilă și web",
@@ -1114,6 +1270,67 @@ export const vocabulary: Record<Language, Vocabulary> = {
         },
       ],
     },
+    experiences: [
+      {
+        period: "Янв 2022 - Настоящее Время",
+        title: "Software Engineer",
+        company: "Custom Code Factory",
+        location: "Сучава, Румыния",
+        description:
+          "В Custom Code Factory мы разрабатываем передовые решения для нужд клиентов.",
+        achievements: [
+          "Разработал инструменты на базе ИИ для извлечения данных из документов и внедрения систем чата Retrieval-Augmented Generation (RAG), что позволило автоматизировать улучшение базы знаний и оптимизировать маркетинговые перспективы с помощью Python и FastAPI.",
+          "Создание веб-сайта WooCommerce для клиентов, управление легкой загрузкой продуктов, управление запасами, создание плагинов с использованием PHP и инструментов для управления тяжелыми операциями, которые есть у клиентов.",
+          "Разработка CRM-решений на React и Nest для помощи клиентам в выявлении новых клиентов, привлечении или удержании их.",
+          "ERP-решения для планирования рабочих процессов в Next.",
+          "Внедрение решений по безопасности для конфиденциальных данных с применением алгоритмов и шифрования на устройствах и жестких дисках, а также быстрых решений по восстановлению данных в случае сбоя.",
+          "Создание решений по миграции на распределенные сервисы и контейнеризация приложений с использованием Docker и конвейеров.",
+          "Создание кроссплатформенных приложений с использованием React Native, которые можно легко размещать в мобильных магазинах.",
+          "Настройка и развертывание приложений в производственной среде с использованием Apache2, Nginx и GitHub Actions.",
+          "Разработка механизмов аутентификации и двухфакторной аутентификации для повышения безопасности приложений.",
+        ],
+        technologies: ["Python", "FastAPI", "PHP", "React", "Next", "Nest", "Docker", "TypeScript", "Node.js", "AWS"],
+      },
+      {
+        period: "Фев 2022 - Май 2024",
+        title: "Senior Application Developer",
+        company: "Marsh McLennan/Expleo Group",
+        location: "Дублин, Ирландия/Яссы, Румыния (удаленно-контракт)",
+        description:
+          "В Marsh McLennan/Expleo Group мы создаем решения для бизнеса клиентов.",
+        achievements: [
+          "Разработал и внедрил высоко оптимизированные облачные сервисы, значительно улучшив производительность и удобство обслуживания для удовлетворения строгих требований API-приложений.",
+          "Оптимизировал кодовую базу, уменьшив ее сложность и разделив концепции, что повысило эффективность выполнения кода. Это включало разделение сложного кода на более мелкие и управляемые части, что облегчило отслеживание и отладку логики.",
+          "Повысил гибкость и масштабируемость приложений, придерживаясь принципов открытости-закрытости в JavaScript, обеспечивая, что система закрыта для изменений, но открыта для добавления новых функций без сбоев.",
+          "Улучшил читаемость кода путем консолидации основной логики и разработки модулей тестирования, что позволило разработчикам легче и эффективнее отлаживать и улучшать тестирование сервисов и API.",
+          "Внедрил и поддерживал механизм управления ошибками, который отслеживает проблемный код и включает процессы восстановления для эффективного решения серьезных проблем.",
+        ],
+        technologies: ["Unqork", "JavaScript", "CSS3", "HTML5", "API", "Cloud Services"],
+      },
+      {
+        period: "Авг 2021 - Сен 2021",
+        title: "QA Developer",
+        company: "ASSIST Software.",
+        location: "Сучава, Румыния",
+        description:
+          "Разработка и тестирование QA для кроссплатформенных мобильных приложений. Сотрудничество с многофункциональными командами для предоставления высококачественного пользовательского опыта.",
+        achievements: [
+          "Создание подробных планов и случаев тестирования для веб- и мобильных приложений.",
+          "Охват всех ключевых областей: функциональность, удобство использования, производительность и безопасность.",
+          "Применение структурированного тестирования для полного охвата.",
+          "Документация:",
+          "Написание четких случаев тестирования с шагами, ожидаемыми результатами и критериями прохождения/неудачи.",
+          "Обзор качества:",
+          "Просмотр спецификаий качества и проектной документации для ясности и осуществимости.",
+          "Предоставление отзывов для улучшения соответствия целям и стандартам проекта.",
+          "Ручное и автоматизированное тестирование:",
+          "Создание ручных и автоматизированных тестов с использованием Cypress.",
+          "Тестирование всех функций в течение выпусков для обеспечения стабильности.",
+          "Использование Cypress для оптимизации тестирования и повышения надежности."
+        ],
+        technologies: ["JavaScript", "Cypress", "REST APIs", "Testing documentation"],
+      },
+    ],
     projects: {
       title: "Избранные Проекты",
       subtitle: "Демонстрация моих лучших работ в мобильной и веб-разработке",

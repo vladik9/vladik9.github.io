@@ -7,12 +7,69 @@ import { Briefcase, Calendar } from "lucide-react";
 import { useLanguage } from "./language-provider";
 import { info } from "@/lib/info";
 
-const experiences = info.experiences;
 
 export function Experience() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { t } = useLanguage();
+  const experiences = [
+    {
+      period: t.experiences[0].period,
+      title: t.experiences[0].title,
+      company: t.experiences[0].company,
+      location: t.experiences[0].location,
+      description: t.experiences[0].description,
+      achievements: [
+        t.experiences[0].achievements[0],
+        t.experiences[0].achievements[1],
+        t.experiences[0].achievements[2],
+        t.experiences[0].achievements[3],
+        t.experiences[0].achievements[4],
+        t.experiences[0].achievements[5],
+        t.experiences[0].achievements[6],
+        t.experiences[0].achievements[7],
+        t.experiences[0].achievements[8],
+        t.experiences[0].achievements[9],
+      ],
+      technologies: t.experiences[0].technologies,
+    },
+    {
+      period: t.experiences[1].period,
+      title: t.experiences[1].title,
+      company: t.experiences[1].company,
+      location: t.experiences[1].location,
+      description: t.experiences[1].description,
+      achievements: [
+        t.experiences[1].achievements[0],
+        t.experiences[1].achievements[1],
+        t.experiences[1].achievements[2],
+        t.experiences[1].achievements[3],
+        t.experiences[1].achievements[4],
+        t.experiences[1].achievements[5],
+      ],
+      technologies: t.experiences[1].technologies,
+    },
+    {
+      period: t.experiences[2].period,
+      title: t.experiences[2].title,
+      company: t.experiences[2].company,
+      location: t.experiences[2].location,
+      description: t.experiences[2].description,
+      achievements: [
+        t.experiences[2].achievements[0],
+        t.experiences[2].achievements[1],
+        t.experiences[2].achievements[2],
+        t.experiences[2].achievements[3],
+        t.experiences[2].achievements[4],
+        t.experiences[2].achievements[5],
+        t.experiences[2].achievements[6],
+        t.experiences[2].achievements[7],
+        t.experiences[2].achievements[8],
+        t.experiences[2].achievements[9],
+      ],
+      technologies: t.experiences[2].technologies,
+    },
+  ];
 
   return (
     <section id="experience" ref={ref} className="py-20 px-4">

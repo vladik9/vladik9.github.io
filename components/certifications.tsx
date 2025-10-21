@@ -7,7 +7,6 @@ import { Award, Calendar, BookCheck } from "lucide-react";
 import { useLanguage } from "./language-provider";
 import { info } from "@/lib/info";
 
-const awards = info.awards;
 export function Certifications() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
