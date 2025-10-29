@@ -89,7 +89,7 @@ export function Hero() {
     { icon: Facebook, href: info.personal.social.facebook },
 
   ];
-  // TODO: Update hero section to be more dynamic and personalized now is not showing my content is old one
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4">
       <div className="container mx-auto">

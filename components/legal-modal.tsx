@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "./language-provider";
 
 interface LegalModalProps {
   isOpen: boolean;
@@ -19,6 +20,8 @@ interface LegalModalProps {
 }
 
 export function LegalModal({ isOpen, onClose, type, title, content }: LegalModalProps) {
+  const { t } = useLanguage();
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -89,7 +92,7 @@ export function LegalModal({ isOpen, onClose, type, title, content }: LegalModal
                 onClick={onClose}
                 className="w-full bg-gradient-to-r from-primary to-cyan-500 hover:from-primary/90 hover:to-cyan-500/90"
               >
-                Close
+                {t.confirmation.close}
               </Button>
             </div>
           </motion.div>

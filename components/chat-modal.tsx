@@ -22,7 +22,7 @@ interface QAItem {
   question: string;
   answer: string;
 }
-
+// TODO: WORK ON completing chat logic
 export function ChatModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [view, setView] = useState<"welcome" | "chat" | "qa" | "contact">("welcome");
@@ -232,8 +232,8 @@ export function ChatModal() {
                       >
                         <div
                           className={`max-w-[80%] p-3 rounded-2xl ${message.sender === "user"
-                              ? "bg-primary text-primary-foreground"
-                              : "bg-accent text-accent-foreground"
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-accent text-accent-foreground"
                             }`}
                         >
                           <p className="text-sm">{message.text}</p>
