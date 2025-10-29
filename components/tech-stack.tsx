@@ -8,36 +8,48 @@ import { useLanguage } from "./language-provider";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const technologies = [
-  { name: "C", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/c-colored.svg", color: "#61DAFB" },
-  { name: "C++", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/cplusplus-colored.svg", color: "#61DAFB" },
-  { name: "Arduino", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/arduino-colored.svg", color: "#2496ED" },
+  { name: "Python", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/python-colored.svg", color: "#3776AB" },
+  { name: "FastAPI", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/fastapi-colored.svg", color: "#FFCA28" },
   { name: "React", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/react-colored.svg", color: "#61DAFB" },
   { name: "React Native", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/react.svg", color: "#61DAFB" },
   { name: "JavaScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/javascript-colored.svg", color: "#F7DF1E" },
   { name: "Nest", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nestjs-colored.svg", color: "#F7DF1E" },
   { name: "TypeScript", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/typescript-colored.svg", color: "#3178C6" },
-  { name: "JQuery", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/jquery-colored.svg", color: "#3178C6" },
   { name: "Node.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nodejs-colored.svg", color: "#339933" },
+  { name: "Express", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/express.svg", color: "#000000" },
   { name: "Next.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/nextjs.svg", color: "#000000" },
+  { name: "Java", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/java-colored.svg", color: "#DD0031" },
+  { name: "Docker", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/docker-colored.svg", color: "#2496ED" },
+  { name: "AWS", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aws.svg", color: "#2496ED" },
+  { name: "MongoDB", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mongodb-colored.svg", color: "#47A248" },
+
+
+  { name: "Spring Boot", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/springboot-colored.svg", color: "#DD0031" },
+  { name: "MySQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mysql-colored.svg", color: "#02569B" },
+
+  { name: "C", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/c-colored.svg", color: "#61DAFB" },
+  { name: "C++", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/cplusplus-colored.svg", color: "#61DAFB" },
+  { name: "Arduino", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/arduino-colored.svg", color: "#2496ED" },
+
+
+  { name: "JQuery", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/jquery-colored.svg", color: "#3178C6" },
+
   { name: "HTML5", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/html5-colored.svg", color: "#E34F26" },
   { name: "CSS3", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/css3-colored.svg", color: "#1572B6" },
   { name: "Tailwind", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/tailwindcss-colored.svg", color: "#06B6D4" },
   { name: "Redux", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/redux-colored.svg", color: "#764ABC" },
-  { name: "FastAPI", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/fastapi-colored.svg", color: "#FFCA28" },
-  { name: "MongoDB", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mongodb-colored.svg", color: "#47A248" },
+
   { name: "PostgreSQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/postgresql-colored.svg", color: "#4169E1" },
   { name: "Git", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/git-colored.svg", color: "#F05032" },
   { name: "GraphQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/graphql-colored.svg", color: "#E10098" },
   { name: "Socket.io", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/socket-io.svg", color: "#010101" },
-  { name: "Express", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/express.svg", color: "#000000" },
+
   { name: "Vue.js", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/vuejs-colored.svg", color: "#4FC08D" },
-  { name: "Java", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/java-colored.svg", color: "#DD0031" },
+
   { name: "JUnit", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/junit5.svg", color: "#DD0031" },
-  { name: "Spring Boot", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/springboot-colored.svg", color: "#DD0031" },
-  { name: "MySQL", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/mysql-colored.svg", color: "#02569B" },
-  { name: "Python", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/python-colored.svg", color: "#3776AB" },
-  { name: "Docker", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/docker-colored.svg", color: "#2496ED" },
-  { name: "AWS", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aws.svg", color: "#2496ED" },
+
+
+
   { name: "Google Cloud", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/googlecloud-colored.svg", color: "#2496ED" },
   { name: "Cypress", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/cypress.svg", color: "#2496ED" },
   { name: "Unqork", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/unqork.svg", color: "#2496ED" },
@@ -63,6 +75,7 @@ const technologies = [
   { name: "After Effects", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/aftereffects.svg", color: "#2496ED" },
   { name: "Figma", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/figma-colored.svg", color: "#2496ED" },
   { name: "Laravel", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/laravel-colored.svg", color: "#2496ED" },
+  { name: "PHP", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/php-colored.svg", color: "#2496ED" },
   { name: "VsCode", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/visualstudiocode-colored.svg", color: "#2496ED" },
   { name: "n8n", icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/icons/skills/n8n.svg", color: "#2496ED" },
 

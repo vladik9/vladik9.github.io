@@ -351,7 +351,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       name: "Vlad Cornici",
       title: "Senior Mobile & Web Developer",
       description:
-        `Delivering high-performance digital solutions with over ${info.personal.stats.yearOfExperience} years of experience in React Native, JavaScript, TypeScript, and modern web technologies. Focused on building scalable, user-driven applications that drive business growth.`,
+        `Delivering high-performance digital solutions with over ${info.personal.stats.yearOfExperience} years of experience in JavaScript, TypeScript, React Native, Java and modern web technologies. Focused on building scalable, user-driven applications that drive business growth.`,
       viewWork: "View My Work",
       downloadCV: "Download CV",
       stats: {
@@ -452,7 +452,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         subjects: [
           "Mathematics",
           "Physics",
-          "Chemistry",
+          "Electronics",
           "Computer Science"
         ],
       },
@@ -781,7 +781,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       name: "Vlad Cornici",
       title: "Software Engineer | AWS Cloud Certified",
       description:
-        `Transformând idei în experiențe digitale excepționale cu peste ${info.personal.stats.yearOfExperience} ani de experiență în React Native, JavaScript, TypeScript și tehnologii web moderne. Specializat în crearea de aplicații scalabile, centrate pe utilizator.`,
+        `Transformând idei în experiențe digitale excepționale cu peste ${info.personal.stats.yearOfExperience} ani de experiență în JavaScript, TypeScript, React Native, Java și tehnologii web moderne. Specializat în crearea de aplicații scalabile, centrate pe utilizator.`,
       viewWork: "Vezi Lucrările Mele",
       downloadCV: "Descarcă CV",
       stats: {
@@ -882,7 +882,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         subjects: [
           "Matematică",
           "Fizică",
-          "Chimie",
+          "Electronică",
           "Informatică"
         ],
       },
@@ -1210,7 +1210,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
       name: "Влад Корнич",
       title: "Старший Mobile & Web Разработчик",
       description:
-        `Превращаю идеи в исключительные цифровые решения с более чем ${info.personal.stats.yearOfExperience} летним опытом работы с React Native, JavaScript, TypeScript и современными веб-технологиями. Специализируюсь на создании масштабируемых, ориентированных на пользователя приложений.`,
+        `Превращаю идеи в исключительные цифровые решения с более чем ${info.personal.stats.yearOfExperience} летним опытом работы с JavaScript, TypeScript, React Native, Java и современными веб-технологиями. Специализируюсь на создании масштабируемых, ориентированных на пользователя приложений.`,
       viewWork: "Посмотреть Работы",
       downloadCV: "Скачать CV",
       stats: {
@@ -1311,7 +1311,7 @@ export const vocabulary: Record<Language, Vocabulary> = {
         subjects: [
           "Математика",
           "Физика",
-          "Химия",
+          "Электроника",
           "Информатика"
         ],
       },

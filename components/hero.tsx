@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, DownloadIcon, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowDown, DownloadIcon, Facebook, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/components/language-provider";
 import { AnimatedParticles } from "@/components/animated-particles";
 import { vocabulary } from "@/lib/vocabulary";
 import { info } from "@/lib/info";
-import { downloadCV, highLightText } from "@/lib/utils";
+import { downloadCV } from "@/lib/utils";
 import { useState, useEffect } from "react";
 
 export function Hero() {
@@ -16,16 +16,19 @@ export function Hero() {
   const [greetingText, setGreetingText] = useState("");
   const [nameText, setNameText] = useState("");
   const [titleText, setTitleText] = useState("");
+  const [descriptionText, setDescriptionText] = useState("");
 
   // Typing animation effect
   useEffect(() => {
     const greetingFull = t.hero.greeting;
     const nameFull = t.hero.name;
     const titleFull = info.personal.title;
+    const descriptionFull = t.hero.description;
 
     let greetingIndex = 0;
     let nameIndex = 0;
     let titleIndex = 0;
+    let descriptionIndex = 0;
 
     // Type greeting first (faster)
     const greetingInterval = setInterval(() => {
@@ -50,6 +53,16 @@ export function Hero() {
                 titleIndex++;
               } else {
                 clearInterval(titleInterval);
+
+                // Start typing description after title is done (fast)
+                const descriptionInterval = setInterval(() => {
+                  if (descriptionIndex < descriptionFull.length) {
+                    setDescriptionText(descriptionFull.slice(0, descriptionIndex + 1));
+                    descriptionIndex++;
+                  } else {
+                    clearInterval(descriptionInterval);
+                  }
+                }, 20);
               }
             }, 40);
           }
@@ -60,7 +73,7 @@ export function Hero() {
     return () => {
       clearInterval(greetingInterval);
     };
-  }, [t.hero.greeting, t.hero.name, info.personal.title]);
+  }, [t.hero.greeting, t.hero.name, info.personal.title, t.hero.description]);
 
   const stats = [
     { label: t.hero.stats.experience, value: info.personal.stats.yearOfExperience },
@@ -73,6 +86,8 @@ export function Hero() {
     { icon: Linkedin, href: info.personal.social.linkedin },
     { icon: Twitter, href: info.personal.social.twitter },
     { icon: Mail, href: info.personal.social.email },
+    { icon: Facebook, href: info.personal.social.facebook },
+
   ];
   // TODO: Update hero section to be more dynamic and personalized now is not showing my content is old one
   return (
@@ -96,7 +111,7 @@ export function Hero() {
                 {greetingText}
                 {greetingText.length < t.hero.greeting.length && (
                   <span className="inline-block w-[3px] h-5 bg-primary ml-1 animate-[blink_0.7s_ease-in-out_infinite]"
-                        style={{ boxShadow: '0 0 8px currentColor' }} />
+                    style={{ boxShadow: '0 0 8px currentColor' }} />
                 )}
               </motion.p>
               <motion.h1
@@ -108,7 +123,7 @@ export function Hero() {
                 {nameText}
                 {nameText.length > 0 && nameText.length < t.hero.name.length && (
                   <span className="inline-block w-[4px] md:w-[5px] h-12 md:h-16 bg-foreground ml-2 animate-[blink_0.7s_ease-in-out_infinite]"
-                        style={{ boxShadow: '0 0 10px currentColor' }} />
+                    style={{ boxShadow: '0 0 10px currentColor' }} />
                 )}
               </motion.h1>
               <motion.h2
@@ -120,19 +135,20 @@ export function Hero() {
                 {titleText}
                 {titleText.length > 0 && titleText.length < info.personal.title.length && (
                   <span className="inline-block w-[3px] md:w-[4px] h-7 md:h-8 bg-accent ml-1 animate-[blink_0.7s_ease-in-out_infinite]"
-                        style={{ boxShadow: '0 0 8px currentColor' }} />
+                    style={{ boxShadow: '0 0 8px currentColor' }} />
                 )}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="text-lg text-muted-foreground leading-relaxed text-pretty"
+                transition={{ delay: 0.5, duration: 0.3 }}
+                className="text-lg text-muted-foreground leading-relaxed text-pretty min-h-[3rem]"
               >
-                {/* {t.hero.description} */}
-                {/* NOTE: this is where the highlighted text will be inserted */}
-                <div dangerouslySetInnerHTML={{ __html: highLightText(t.hero.description, info.personal.stats.yearOfExperience) }} />
-
+                {descriptionText}
+                {descriptionText.length > 0 && descriptionText.length < t.hero.description.length && (
+                  <span className="inline-block w-[2px] h-5 bg-muted-foreground ml-1 animate-[blink_0.7s_ease-in-out_infinite]"
+                    style={{ boxShadow: '0 0 6px currentColor' }} />
+                )}
               </motion.p>
             </motion.div>
 

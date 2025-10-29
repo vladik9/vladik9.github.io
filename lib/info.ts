@@ -11,7 +11,7 @@ export const info = {
       linkedin: "https://www.linkedin.com/in/cornici-vlad",
       github: "https://github.com/vladik9",
       twitter: "https://x.com/CorniciI",
-      email: "v.cornici@gamil.com",
+      email: "mailto:v.cornici@gmail.com",
       facebook: "https://www.facebook.com/cornici.vlad",
       calendly: "https://callendly.com/v-cornici",
       discord: "https://discordapp.com/users/dexy_96"
