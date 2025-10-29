@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { useLanguage } from "./language-provider";
 import { ConfirmationModal } from "./confirmation-modal";
+import { LegalModal } from "./legal-modal";
 import { info } from "@/lib/info";
 import CalendlyButton from "./CalendlyButton";
 
@@ -46,6 +47,11 @@ export function RequestQuote() {
     specialRequests: "",
   });
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [marketingAccepted, setMarketingAccepted] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [termsError, setTermsError] = useState(false);
 
   const handleServiceToggle = (service: string) => {
     setSelectedServices((prev) => (prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service]));
@@ -53,7 +59,15 @@ export function RequestQuote() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("[v0] Form submitted:", { ...formData, services: selectedServices });
+
+    // Validate terms acceptance
+    if (!termsAccepted) {
+      setTermsError(true);
+      return;
+    }
+
+    setTermsError(false);
+    console.log("[v0] Form submitted:", { ...formData, services: selectedServices, termsAccepted, marketingAccepted });
     setShowConfirmation(true);
     setFormData({
       name: "",
@@ -67,6 +81,8 @@ export function RequestQuote() {
       specialRequests: "",
     });
     setSelectedServices([]);
+    setTermsAccepted(false);
+    setMarketingAccepted(false);
   };
 
   const services = [
@@ -260,13 +276,45 @@ export function RequestQuote() {
                 {/* Terms */}
                 <div className="space-y-3">
                   <div className="flex items-start space-x-2">
-                    <Checkbox id="terms" required />
+                    <Checkbox
+                      id="terms"
+                      checked={termsAccepted}
+                      onCheckedChange={(checked) => {
+                        setTermsAccepted(checked as boolean);
+                        if (checked) setTermsError(false);
+                      }}
+                    />
                     <label htmlFor="terms" className="text-sm leading-tight">
-                      {t.quote.form.terms} <span className="text-destructive">*</span>
+                      {t.legalDocs.acceptText.split("{terms}")[0]}
+                      <button
+                        type="button"
+                        onClick={() => setShowTermsModal(true)}
+                        className="text-primary hover:underline font-medium mx-1"
+                      >
+                        {t.legalDocs.termsAndConditions.linkText}
+                      </button>
+                      {t.legalDocs.acceptText.split("{terms}")[1].split("{privacy}")[0]}
+                      <button
+                        type="button"
+                        onClick={() => setShowPrivacyModal(true)}
+                        className="text-primary hover:underline font-medium mx-1"
+                      >
+                        {t.legalDocs.privacyPolicy.linkText}
+                      </button>
+                      <span className="text-destructive ml-1">*</span>
                     </label>
                   </div>
+                  {termsError && (
+                    <p className="text-sm text-destructive ml-6">
+                      {t.legalDocs.termsRequired}
+                    </p>
+                  )}
                   <div className="flex items-start space-x-2">
-                    <Checkbox id="marketing" />
+                    <Checkbox
+                      id="marketing"
+                      checked={marketingAccepted}
+                      onCheckedChange={(checked) => setMarketingAccepted(checked as boolean)}
+                    />
                     <label htmlFor="marketing" className="text-sm leading-tight">
                       {t.quote.form.marketing}
                     </label>
@@ -378,13 +426,38 @@ export function RequestQuote() {
           </motion.div>
         </div>
       </div>
-      {/* TODO: add therms of usage and marketing policy */}
+
+      {/* Confirmation Modal */}
       <ConfirmationModal
         isOpen={showConfirmation}
         onClose={() => setShowConfirmation(false)}
         type="success"
         title={t.confirmation.formSubmitted.title}
         message={t.confirmation.formSubmitted.message}
+      />
+
+      {/* Terms and Conditions Modal */}
+      <LegalModal
+        isOpen={showTermsModal}
+        onClose={() => setShowTermsModal(false)}
+        type="terms"
+        title={t.legalDocs.termsAndConditions.title}
+        content={{
+          sections: t.legalDocs.termsAndConditions.sections,
+          lastUpdated: t.legalDocs.termsAndConditions.lastUpdated,
+        }}
+      />
+
+      {/* Privacy Policy Modal */}
+      <LegalModal
+        isOpen={showPrivacyModal}
+        onClose={() => setShowPrivacyModal(false)}
+        type="privacy"
+        title={t.legalDocs.privacyPolicy.title}
+        content={{
+          sections: t.legalDocs.privacyPolicy.sections,
+          lastUpdated: t.legalDocs.privacyPolicy.lastUpdated,
+        }}
       />
     </section>
   );

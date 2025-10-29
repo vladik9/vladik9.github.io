@@ -330,6 +330,29 @@ export interface Vocabulary {
       message: string;
     };
   };
+  // Legal Documents Section
+  legalDocs: {
+    termsAndConditions: {
+      title: string;
+      linkText: string;
+      lastUpdated: string;
+      sections: Array<{
+        title: string;
+        content: string | string[];
+      }>;
+    };
+    privacyPolicy: {
+      title: string;
+      linkText: string;
+      lastUpdated: string;
+      sections: Array<{
+        title: string;
+        content: string | string[];
+      }>;
+    };
+    acceptText: string;
+    termsRequired: string;
+  };
 }
 
 export const vocabulary: Record<Language, Vocabulary> = {
@@ -762,6 +785,125 @@ export const vocabulary: Record<Language, Vocabulary> = {
         message: "There was an error submitting your form. Please try again or contact me directly.",
       },
     },
+    legalDocs: {
+      termsAndConditions: {
+        title: "Terms and Conditions",
+        linkText: "Terms and Conditions",
+        lastUpdated: "Last updated: October 29, 2025",
+        sections: [
+          {
+            title: "1. Introduction",
+            content: `These terms and conditions ("Terms") govern the use of services offered by ${info.personal.name} ("the Company", "we", "us"). By accessing or using our services, you agree to be bound by these Terms.`,
+          },
+          {
+            title: "2. Services Offered",
+            content: `${info.personal.name} offers software development services, IT consulting, outsourcing, and personalized digital solutions. Specific services will be detailed in separate contracts concluded with clients.`,
+          },
+          {
+            title: "3. Confidentiality and Data Protection",
+            content: "We are committed to protecting the confidentiality of your data. All information received through the contact form will be used exclusively for processing your request and subsequent communication.",
+          },
+          {
+            title: "4. Intellectual Property",
+            content: "All intellectual property rights to the developed solutions will be established through specific contracts concluded for each project.",
+          },
+          {
+            title: "5. Limitation of Liability",
+            content: `${info.personal.name} will not be liable for indirect, incidental, or consequential damages resulting from the use of our services, except in cases expressly provided by applicable law.`,
+          },
+          {
+            title: "6. Modification of Terms",
+            content: "We reserve the right to modify these Terms at any time. Changes will be published on our website and will take effect immediately after publication.",
+          },
+          {
+            title: "7. Applicable Law",
+            content: "These Terms are governed by Romanian law. Any dispute will be resolved by the competent courts in Romania.",
+          },
+          {
+            title: "8. Contact",
+            content: `For questions regarding these Terms, you can contact us at: ${info.personal.email}`,
+          },
+        ],
+      },
+      privacyPolicy: {
+        title: "Privacy Policy",
+        linkText: "Privacy Policy",
+        lastUpdated: "Last updated: October 29, 2025",
+        sections: [
+          {
+            title: "1. General Information",
+            content: `This Privacy Policy describes how ${info.personal.name} collects, uses, and protects personal information in accordance with the General Data Protection Regulation (GDPR).`,
+          },
+          {
+            title: "2. Data Collected",
+            content: "We collect the following types of personal data:",
+
+          },
+          {
+            title: "",
+            content: [
+              "First and last name",
+              "Email address",
+              "Phone number (optional)",
+              "Company name (optional)",
+              "Details about your project",
+              "IP address and technical browsing information",
+            ],
+          },
+          {
+            title: "3. Purpose of Processing",
+            content: "We use your data for:",
+          },
+          {
+            title: "",
+            content: [
+              "Processing quote requests",
+              "Communicating with you",
+              "Providing requested services",
+              "Improving our services",
+              "Complying with legal obligations",
+            ],
+          },
+          {
+            title: "4. Legal Basis",
+            content: "We process data based on your consent, for contract execution, to comply with legal obligations, and for the legitimate interests of the company.",
+          },
+          {
+            title: "5. Data Sharing",
+            content: "We do not sell, rent, or share your data with third parties, except as required by law or with your explicit consent.",
+          },
+          {
+            title: "6. Your Rights",
+            content: "You have the right to:",
+          },
+          {
+            title: "",
+            content: [
+              "Request access to personal data",
+              "Request correction of inaccurate data",
+              "Request data deletion",
+              "Object to processing",
+              "Request data portability",
+              "Withdraw consent",
+            ],
+          },
+          {
+            title: "7. Data Security",
+            content: "We implement appropriate technical and organizational measures to protect your data against unauthorized access, loss, or modification.",
+          },
+          {
+            title: "8. Retention Period",
+            content: "We retain personal data only for the period necessary to fulfill the purposes for which it was collected or as required by applicable legal provisions.",
+          },
+          {
+            title: "9. Contact DPO",
+            content: `For exercising your rights or questions related to data protection, you can contact us at: ${info.personal.email}`,
+          },
+        ],
+      },
+      acceptText: "I accept the {terms} and {privacy}",
+      termsRequired: "You must accept the Terms and Conditions and Privacy Policy to continue.",
+    },
   },
   ro: {
     nav: {
@@ -1191,6 +1333,124 @@ export const vocabulary: Record<Language, Vocabulary> = {
         message: "A apărut o eroare la trimiterea formularului. Te rog încearcă din nou sau contactează-mă direct.",
       },
     },
+    legalDocs: {
+      termsAndConditions: {
+        title: "Termeni și Condiții",
+        linkText: "Termenii și Condițiile",
+        lastUpdated: "Ultima actualizare: 29.10.2025",
+        sections: [
+          {
+            title: "1. Introducere",
+            content: `Acești termeni și condiții ("Termenii") reglementează utilizarea serviciilor oferite de ${info.personal.name} ("Compania", "noi", "nouă"). Prin accesarea sau utilizarea serviciilor noastre, acceptați să fiți legat de acești Termeni.`,
+          },
+          {
+            title: "2. Serviciile Oferite",
+            content: `${info.personal.name} oferă servicii de dezvoltare software, consultanță IT, outsourcing și soluții digitale personalizate. Serviciile specifice vor fi detaliate în contractele separate încheiate cu clienții.`,
+          },
+          {
+            title: "3. Confidențialitate și Protecția Datelor",
+            content: "Ne angajăm să protejăm confidențialitatea datelor dumneavoastră. Toate informațiile primite prin formularul de contact vor fi utilizate exclusiv pentru procesarea cererii dumneavoastră și comunicarea ulterioară.",
+          },
+          {
+            title: "4. Proprietatea Intelectuală",
+            content: "Toate drepturile de proprietate intelectuală asupra soluțiilor dezvoltate vor fi stabilite prin contractele specifice încheiate pentru fiecare proiect în parte.",
+          },
+          {
+            title: "5. Limitarea Responsabilității",
+            content: `${info.personal.name} nu va fi responsabilă pentru daune indirecte, incidentale sau consecvențiale rezultate din utilizarea serviciilor noastre, cu excepția cazurilor prevăzute expres de legislația în vigoare.`,
+          },
+          {
+            title: "6. Modificarea Termenilor",
+            content: "Ne rezervăm dreptul de a modifica acești Termeni în orice moment. Modificările vor fi publicate pe site-ul nostru și vor intra în vigoare imediat după publicare.",
+          },
+          {
+            title: "7. Legea Aplicabilă",
+            content: "Acești Termeni sunt reglementați de legea română. Orice dispută va fi soluționată de instanțele competente din România.",
+          },
+          {
+            title: "8. Contact",
+            content: `Pentru întrebări privind acești Termeni, ne puteți contacta la: ${info.personal.email}`,
+          },
+        ],
+      },
+      privacyPolicy: {
+        title: "Politica de Confidențialitate",
+        linkText: "Politica de Confidențialitate",
+        lastUpdated: "Ultima actualizare: 29.10.2025",
+        sections: [
+          {
+            title: "1. Informații Generale",
+            content: `Această Politică de Confidențialitate descrie modul în care ${info.personal.name} colectează, utilizează și protejează informațiile personale în conformitate cu Regulamentul General privind Protecția Datelor (GDPR).`,
+          },
+          {
+            title: "2. Date Colectate",
+            content: "Colectăm următoarele tipuri de date personale:",
+          },
+          {
+            title: "",
+            content: [
+              "Nume și prenume",
+              "Adresa de email",
+              "Numărul de telefon (opțional)",
+              "Numele companiei (opțional)",
+              "Detalii despre proiectul dumneavoastră",
+              "Adresa IP și informații tehnice de navigare",
+            ],
+          },
+          {
+            title: "3. Scopul Prelucrării",
+            content: "Utilizăm datele dumneavoastră pentru:",
+          },
+          {
+            title: "",
+            content: [
+              "Procesarea cererii de ofertă",
+              "Comunicarea cu dumneavoastră",
+              "Furnizarea serviciilor solicitate",
+              "Îmbunătățirea serviciilor noastre",
+              "Respectarea obligațiilor legale",
+            ],
+          },
+          {
+            title: "4. Temeiurile Legale",
+            content: "Prelucrăm datele pe baza consimțământului dumneavoastră, pentru executarea contractului, pentru respectarea obligațiilor legale și pentru interesele legitime ale companiei.",
+          },
+          {
+            title: "5. Partajarea Datelor",
+            content: "Nu vindem, nu închiriem și nu partajăm datele dumneavoastră cu terți, cu excepția cazurilor prevăzute de lege sau cu consimțământul dumneavoastră explicit.",
+          },
+          {
+            title: "6. Drepturile Dumneavoastră",
+            content: "Aveți dreptul să:",
+          },
+          {
+            title: "",
+            content: [
+              "Solicitați accesul la datele personale",
+              "Cereți rectificarea datelor inexacte",
+              "Solicitați ștergerea datelor",
+              "Vă opuneți prelucrării",
+              "Solicitați portabilitatea datelor",
+              "Vă retrageți consimțământul",
+            ],
+          },
+          {
+            title: "7. Securitatea Datelor",
+            content: "Implementăm măsuri tehnice și organizatorice adecvate pentru a proteja datele dumneavoastră împotriva accesului neautorizat, pierderii sau modificării.",
+          },
+          {
+            title: "8. Perioada de Păstrare",
+            content: "Păstrăm datele personale doar pe perioada necesară îndeplinirii scopurilor pentru care au fost colectate sau conform prevederilor legale aplicabile.",
+          },
+          {
+            title: "9. Contact DPO",
+            content: `Pentru exercitarea drepturilor sau pentru întrebări legate de protecția datelor, ne puteți contacta la: ${info.personal.email}`,
+          },
+        ],
+      },
+      acceptText: "Accept {terms} și {privacy}",
+      termsRequired: "Trebuie să accepți Termenii și Condițiile și Politica de Confidențialitate pentru a continua.",
+    },
   },
   ru: {
     nav: {
@@ -1618,6 +1878,124 @@ export const vocabulary: Record<Language, Vocabulary> = {
         title: "Ошибка Отправки",
         message: "Произошла ошибка при отправке формы. Пожалуйста, попробуйте снова или свяжитесь со мной напрямую.",
       },
+    },
+    legalDocs: {
+      termsAndConditions: {
+        title: "Условия и Положения",
+        linkText: "Условия и Положения",
+        lastUpdated: "Последнее обновление: 29.10.2025",
+        sections: [
+          {
+            title: "1. Введение",
+            content: `Эти условия и положения ("Условия") регулируют использование услуг, предлагаемых ${info.personal.name} ("Компания", "мы", "нас"). Получая доступ к нашим услугам или используя их, вы соглашаетесь соблюдать эти Условия.`,
+          },
+          {
+            title: "2. Предлагаемые Услуги",
+            content: `${info.personal.name} предлагает услуги разработки программного обеспечения, ИТ-консалтинг, аутсорсинг и персонализированные цифровые решения. Конкретные услуги будут подробно описаны в отдельных контрактах, заключенных с клиентами.`,
+          },
+          {
+            title: "3. Конфиденциальность и Защита Данных",
+            content: "Мы обязуемся защищать конфиденциальность ваших данных. Вся информация, полученная через контактную форму, будет использоваться исключительно для обработки вашего запроса и последующего общения.",
+          },
+          {
+            title: "4. Интеллектуальная Собственность",
+            content: "Все права интеллектуальной собственности на разработанные решения будут установлены посредством конкретных контрактов, заключенных для каждого проекта.",
+          },
+          {
+            title: "5. Ограничение Ответственности",
+            content: `${info.personal.name} не несет ответственности за косвенные, случайные или последующие убытки, возникшие в результате использования наших услуг, за исключением случаев, прямо предусмотренных применимым законодательством.`,
+          },
+          {
+            title: "6. Изменение Условий",
+            content: "Мы оставляем за собой право изменять эти Условия в любое время. Изменения будут опубликованы на нашем веб-сайте и вступят в силу сразу после публикации.",
+          },
+          {
+            title: "7. Применимое Законодательство",
+            content: "Эти Условия регулируются румынским законодательством. Любой спор будет разрешаться компетентными судами Румынии.",
+          },
+          {
+            title: "8. Контакты",
+            content: `По вопросам, касающимся этих Условий, вы можете связаться с нами по адресу: ${info.personal.email}`,
+          },
+        ],
+      },
+      privacyPolicy: {
+        title: "Политика Конфиденциальности",
+        linkText: "Политика Конфиденциальности",
+        lastUpdated: "Последнее обновление: 29.10.2025",
+        sections: [
+          {
+            title: "1. Общая Информация",
+            content: `Эта Политика конфиденциальности описывает, как ${info.personal.name} собирает, использует и защищает личную информацию в соответствии с Общим регламентом по защите данных (GDPR).`,
+          },
+          {
+            title: "2. Собираемые Данные",
+            content: "Мы собираем следующие типы персональных данных:",
+          },
+          {
+            title: "",
+            content: [
+              "Имя и фамилия",
+              "Адрес электронной почты",
+              "Номер телефона (необязательно)",
+              "Название компании (необязательно)",
+              "Детали о вашем проекте",
+              "IP-адрес и техническая информация о просмотре",
+            ],
+          },
+          {
+            title: "3. Цели Обработки",
+            content: "Мы используем ваши данные для:",
+          },
+          {
+            title: "",
+            content: [
+              "Обработки запросов на предложение",
+              "Общения с вами",
+              "Предоставления запрошенных услуг",
+              "Улучшения наших услуг",
+              "Соблюдения юридических обязательств",
+            ],
+          },
+          {
+            title: "4. Правовые Основания",
+            content: "Мы обрабатываем данные на основе вашего согласия, для исполнения контракта, для соблюдения юридических обязательств и для законных интересов компании.",
+          },
+          {
+            title: "5. Обмен Данными",
+            content: "Мы не продаем, не сдаем в аренду и не передаем ваши данные третьим лицам, за исключением случаев, предусмотренных законом, или с вашего явного согласия.",
+          },
+          {
+            title: "6. Ваши Права",
+            content: "Вы имеете право:",
+          },
+          {
+            title: "",
+            content: [
+              "Запросить доступ к личным данным",
+              "Запросить исправление неточных данных",
+              "Запросить удаление данных",
+              "Возразить против обработки",
+              "Запросить переносимость данных",
+              "Отозвать согласие",
+            ],
+          },
+          {
+            title: "7. Безопасность Данных",
+            content: "Мы применяем соответствующие технические и организационные меры для защиты ваших данных от несанкционированного доступа, потери или изменения.",
+          },
+          {
+            title: "8. Срок Хранения",
+            content: "Мы храним персональные данные только в течение периода, необходимого для достижения целей, для которых они были собраны, или в соответствии с применимыми правовыми положениями.",
+          },
+          {
+            title: "9. Контакт с DPO",
+            content: `Для осуществления ваших прав или вопросов, связанных с защитой данных, вы можете связаться с нами по адресу: ${info.personal.email}`,
+          },
+        ],
+      },
+      acceptText: "Я принимаю {terms} и {privacy}",
+      termsRequired: "Вы должны принять Условия и Положения и Политику конфиденциальности, чтобы продолжить.",
     },
   },
 };
