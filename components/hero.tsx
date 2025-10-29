@@ -9,9 +9,58 @@ import { AnimatedParticles } from "@/components/animated-particles";
 import { vocabulary } from "@/lib/vocabulary";
 import { info } from "@/lib/info";
 import { downloadCV, highLightText } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 export function Hero() {
   const { t } = useLanguage();
+  const [greetingText, setGreetingText] = useState("");
+  const [nameText, setNameText] = useState("");
+  const [titleText, setTitleText] = useState("");
+
+  // Typing animation effect
+  useEffect(() => {
+    const greetingFull = t.hero.greeting;
+    const nameFull = t.hero.name;
+    const titleFull = info.personal.title;
+
+    let greetingIndex = 0;
+    let nameIndex = 0;
+    let titleIndex = 0;
+
+    // Type greeting first (faster)
+    const greetingInterval = setInterval(() => {
+      if (greetingIndex < greetingFull.length) {
+        setGreetingText(greetingFull.slice(0, greetingIndex + 1));
+        greetingIndex++;
+      } else {
+        clearInterval(greetingInterval);
+
+        // Start typing name after greeting is done (medium speed)
+        const nameInterval = setInterval(() => {
+          if (nameIndex < nameFull.length) {
+            setNameText(nameFull.slice(0, nameIndex + 1));
+            nameIndex++;
+          } else {
+            clearInterval(nameInterval);
+
+            // Start typing title after name is done (faster)
+            const titleInterval = setInterval(() => {
+              if (titleIndex < titleFull.length) {
+                setTitleText(titleFull.slice(0, titleIndex + 1));
+                titleIndex++;
+              } else {
+                clearInterval(titleInterval);
+              }
+            }, 40);
+          }
+        }, 80);
+      }
+    }, 60);
+
+    return () => {
+      clearInterval(greetingInterval);
+    };
+  }, [t.hero.greeting, t.hero.name, info.personal.title]);
 
   const stats = [
     { label: t.hero.stats.experience, value: info.personal.stats.yearOfExperience },
@@ -41,26 +90,38 @@ export function Hero() {
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-primary text-lg"
+                transition={{ delay: 0.2, duration: 0.3 }}
+                className="text-primary text-lg min-h-[1.75rem]"
               >
-                {t.hero.greeting}
+                {greetingText}
+                {greetingText.length < t.hero.greeting.length && (
+                  <span className="inline-block w-[3px] h-5 bg-primary ml-1 animate-[blink_0.7s_ease-in-out_infinite]"
+                        style={{ boxShadow: '0 0 8px currentColor' }} />
+                )}
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-5xl md:text-7xl font-bold text-balance"
+                transition={{ delay: 0.3, duration: 0.4 }}
+                className="text-5xl md:text-7xl font-bold text-balance min-h-[3.5rem] md:min-h-[5rem]"
               >
-                {t.hero.name}
+                {nameText}
+                {nameText.length > 0 && nameText.length < t.hero.name.length && (
+                  <span className="inline-block w-[4px] md:w-[5px] h-12 md:h-16 bg-foreground ml-2 animate-[blink_0.7s_ease-in-out_infinite]"
+                        style={{ boxShadow: '0 0 10px currentColor' }} />
+                )}
               </motion.h1>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-2xl md:text-3xl font-semibold text-accent"
+                transition={{ delay: 0.4, duration: 0.3 }}
+                className="text-2xl md:text-3xl font-semibold text-accent min-h-[2rem] md:min-h-[2.5rem]"
               >
-                {info.personal.title}
+                {titleText}
+                {titleText.length > 0 && titleText.length < info.personal.title.length && (
+                  <span className="inline-block w-[3px] md:w-[4px] h-7 md:h-8 bg-accent ml-1 animate-[blink_0.7s_ease-in-out_infinite]"
+                        style={{ boxShadow: '0 0 8px currentColor' }} />
+                )}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
