@@ -25,7 +25,7 @@ export function Hero() {
     { icon: Twitter, href: info.personal.social.twitter },
     { icon: Mail, href: info.personal.social.email },
   ];
-
+  // TODO: Update hero section to be more dynamic and personalized now is not showing my content is old one
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4">
       <div className="container mx-auto">
@@ -88,7 +88,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent cursor-pointer"
+                className="border-primary text-primary hover:bg-primary hover:text-primary bg-transparent cursor-pointer"
                 onClick={downloadCV} >
                 {t.hero.downloadCV}
                 <DownloadIcon className="ml-2 h-4 w-4" />

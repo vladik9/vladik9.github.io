@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: vocabulary.en.hero.name,
   description: vocabulary.en.hero.description,
   icons: {
-    icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/favicon.png",
+    icon: "https://raw.githubusercontent.com/vladik9/vladik9.github.io/main/public/favicon.svg",
   },
 };
 
